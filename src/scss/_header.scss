@@ -1,0 +1,300 @@
+    // Assuming you have defined the flex-v-center mixin
+    @mixin flex-v-center {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header {
+        position: relative;
+        z-index: 5;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 80%);
+        &__container {
+            @include flex-v-center;
+            justify-content: space-between;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            width: 100%;
+            .menu-btn__body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .menu-btn__body--text {
+                    color: #fff;
+                    font-size: 14px;
+                    .menu-text {
+                        padding-top: 3px;
+                    }
+                }
+                .menu-btn {
+                    width: 26px;
+                    height: 30px;
+                    left: 5px;
+                    position: relative;
+                    z-index: 2;
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                    .bar {
+                        width: 17px;
+                        height: 2px;
+                        position: absolute;
+                        top: 60%;
+                        left: 35%;
+                        transform: translate(-50%, -50%);
+                        background-color: #fff;
+                        transition: all 0.3s ease-in-out;
+                        border-radius: 4px;
+                        &:nth-of-type(2) {
+                            top: 40%;
+                        }
+                        &:nth-of-type(3) {
+                            top: 80%;
+                        }
+                    }
+                    /* Меняем гамбургер иконку, когда меню открыто */
+                    &.active {
+                        .bar:nth-of-type(1) {
+                            display: none;
+                        }
+                        .bar:nth-of-type(2) {
+                            top: 50%;
+                            transform: translate(-50%, 0%) rotate(45deg);
+                            background-color: #000;
+                        }
+                        .bar:nth-of-type(3) {
+                            top: 50%;
+                            transform: translate(-50%, 0%) rotate(-45deg);
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+            .nav--left {
+                position: fixed;
+                top: 35px;
+                left: 0;
+                width: 32%;
+                height: 100%;
+                padding-top: 65px;
+                background: #fff;
+                transform: translateX(-100%);
+                transition: transform 0.5s;
+                &.active {
+                    overflow: scroll;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        -webkit-appearance: none;
+                        width: 7px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 4px;
+                        background-color: #b3b3b3;
+                        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+                    }
+                    transform: translateX(0);
+                }
+                .nav__list-item {
+                    list-style-type: none;
+                    .nav__link--left {
+                        font-family: 'GalanoGrotesque-Semibold', sans-serif;
+                        display: block;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        color: #fff;
+                        padding: 10px 0 10px 135px;
+                        &.bkgclr1 {
+                            background-color: #ee2a26;
+                        }
+                        &.bkgclr2 {
+                            background-color: #63c6f1;
+                        }
+                        &.bkgclr3 {
+                            background-color: #373d91;
+                        }
+                        &.bkgclr4 {
+                            background-color: #24a64c;
+                        }
+                    }
+                    .nav__link--sublist {
+                        background-color: #fff;
+                        border: none;
+                        padding: 20px 0 40px 135px;
+                        &-item {
+                            a {
+                                display: block;
+                                width: 100%;
+                                font-family: 'GalanoGrotesque-Bold', sans-serif;
+                                color: #000;
+                                span {
+                                    position: absolute;
+                                    right: 20px;
+                                }
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            &:not(:last-child) {
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+                &__img {
+                    position: absolute;
+                    right: 50%;
+                    top: 20px;
+                }
+            }
+        }
+        &__logo {
+            width: 100%;
+            height: 22px;
+            margin-left: 52px;
+            img {
+                width: 143px;
+            }
+        }
+        &__wishlist {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            position: relative;
+            &-cart {
+                background-image: url(../img/cart.svg);
+                margin-right: 18px;
+                &::before {
+                    content: '3';
+                    font-family: 'GalanoGrotesque', sans-serif;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    top: -4px;
+                    right: -6px;
+                    width: 12px;
+                    height: 12px;
+                    font-size: 10px;
+                    color: #000;
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
+            }
+            &-login {
+                background-image: url(../img/login.svg);
+                margin-right: 12px;
+            }
+        }
+        &__utilities {
+            display: flex;
+            margin-left: 14px;
+            .dropbtn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                &-lang {
+                    background-color: transparent;
+                    &::before {
+                        content: 'Ro';
+                        font-family: 'GalanoGrotesque', sans-serif;
+                        position: absolute;
+                        bottom: -5px;
+                        right: -10px;
+                        width: 10px;
+                        height: 10px;
+                        font-size: 11px;
+                        color: #fff;
+                    }
+                }
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                .dropdown-content {
+                    position: absolute;
+                    right: -10px;
+                    top: 29px;
+                    background-color: #fff;
+                    width: 35px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    transition: opacity 0.3s ease-out;
+                    display: none;
+                    a {
+                        color: black;
+                        font-family: 'GalanoGrotesque-Light', sans-serif;
+                        text-decoration: none;
+                        padding: 8px;
+                        font-size: 14px;
+                        display: block;
+                        &:hover {
+                            background-color: #000;
+                            color: #fff;
+                        }
+                    }
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+    .header-contacts {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary);
+        text-align: right;
+        font-size: 14px;
+        background-size: 16px 16px;
+        .contacts__email,
+        .contacts__phone {
+            background-repeat: no-repeat;
+            background-position: left center;
+            letter-spacing: 1px;
+        }
+        .contacts__email {
+            background-image: url(../img/mail.svg);
+            padding-left: 35px;
+            margin-right: 32px;
+        }
+        .contacts__phone {
+            background-image: url(../img/phone.svg);
+            padding-left: 25px;
+        }
+        a {
+            color: var(--color-black);
+        }
+    }
+    
+    .nav {
+        &__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__link {
+            font-family: "GalanoGrotesque-Light", sans-serif;
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:not(:last-child) {
+                padding-right: 31px;
+            }
+        }
+        &__search {
+            width: 384px;
+            height: 45px;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.2);
+            background-image: url(../img/search_icon.svg);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: right 13px center;
+        }
+    }

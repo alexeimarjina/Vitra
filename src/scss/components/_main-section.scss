@@ -1,0 +1,106 @@
+.main--section {
+    position: relative;
+    top: -100px;
+}
+
+.my-slider-progress {
+    background: #fff;
+    position: relative;
+    top: -18px;
+    &-bar {
+        background: #000;
+        height: 2px;
+        border-radius: 2px;
+        transition: width 400ms ease;
+        width: 0;
+        // span {
+        //     padding-top: 30px;
+        //     color: #000;
+        // }
+    }
+}
+
+.splide {
+    width: 100%;
+    height: 100vh;
+    .splide__wrapper {
+        max-width: 1046px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        bottom: 130px;
+    }
+    &__pagination {
+        display: none;
+    }
+    &__arrows {
+        width: 100px;
+        position: absolute;
+        bottom: 8px;
+        right: 220px;
+    }
+    &__arrow {
+        background: transparent;
+        border-radius: none;
+        svg {
+            fill: #fff;
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+    &__slide {
+        background-image: url(../../img/main-bkg.jpg);
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+    &__title {
+        font-family: 'GalanoGrotesque-Semibold', sans-serif;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 360px;
+        padding-bottom: 30px;
+        letter-spacing: 3px;
+    }
+    &__text {
+        max-width: 550px;
+        color: #fff;
+        letter-spacing: 2px;
+        font-size: 18px;
+        line-height: 25px;
+        padding-bottom: 80px;
+    }
+    &__link {
+        display: inline-block;
+        border-radius: 25px;
+        width: 255px;
+        height: 50px;
+        border: 1px solid #000;
+        text-align: center;
+        padding-top: 18px;
+        color: #000;
+        background-color: #fff;
+        box-shadow: #000;
+        margin-bottom: 425px;
+    }
+    &__progress-text {
+        display: flex;
+        justify-content: space-between;
+        &-title {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        &-subinfo {
+            font-family: 'GalanoGrotesque-Bold', sans-serif;
+            color: #fff;
+            font-size: 24px;
+            max-width: 190px;
+            &:nth-child(3) {
+                max-width: 140px;
+            }
+            &:nth-child(4) {
+                max-width: 190px;
+            }
+        }
+    }
+}
