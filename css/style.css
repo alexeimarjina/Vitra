@@ -1928,12 +1928,10 @@ body.dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -1946,9 +1944,38 @@ body.dark {
   font-family: "GalanoGrotesque-Bold", sans-serif;
 }
 
+.life-section .swiper-text__body .swiper-tab-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.life-section .swiper-text__body .swiper-tab-nav .swiper-tab-nav__item .swiper-tab-nav__text {
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #454545;
+  border-radius: 20px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.life-section .swiper-text__body .swiper-tab-nav .swiper-tab-nav__item .swiper-tab-nav__text:hover {
+  background: #000;
+  color: #fff;
+}
+
 .life-section .swiper .swiper-wrapper .swiper-slide {
-  max-width: 320px;
+  max-width: 25%;
   height: 360px;
+}
+
+.life-section .swiper .swiper-wrapper .swiper-slide--visible {
+  display: block;
 }
 
 .life-section .swiper .swiper-wrapper .swiper-slide img {
@@ -1960,7 +1987,7 @@ body.dark {
 }
 
 .life-section .swiper .swiper-wrapper .swiper-slide__img1 {
-  background-image: url(../../img/life-solution1.jpg);
+  background-image: url(../../img/life-ideas1.jpg);
   background-size: 320px 320px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
@@ -1968,7 +1995,7 @@ body.dark {
 }
 
 .life-section .swiper .swiper-wrapper .swiper-slide__img2 {
-  background-image: url(../../img/life-solution2.jpg);
+  background-image: url(../../img/life-ideas2.jpg);
   background-size: 320px 320px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
@@ -1976,25 +2003,19 @@ body.dark {
 }
 
 .life-section .swiper .swiper-wrapper .swiper-slide__img3 {
-  background-image: url(../../img/life-solution3.jpg);
+  background-image: url(../../img/life-ideas3.jpg);
   background-size: 320px 320px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.life-section .swiper .swiper-wrapper .swiper-slide__text {
-  opacity: 0.8;
-  margin-top: 222px;
-  text-align: center;
-  font-size: 16px;
-  color: #000;
-  background-color: #dddbd9;
-  padding: 20px 0;
-}
-
-.life-section .swiper .swiper-wrapper .swiper-slide__span {
-  font-family: "GalanoGrotesque-Bold", sans-serif;
+.life-section .swiper .swiper-wrapper .swiper-slide__img4 {
+  background-image: url(../../img/life-ideas4.jpg);
+  background-size: 320px 320px;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .life-section .swiper-scrollbar {
@@ -2004,10 +2025,11 @@ body.dark {
 }
 
 .life-section .swiper-scrollbar-drag-life {
-  background: #373d91;
+  background: #24a64c;
 }
 
 .life-section .swiper .swiper-button-next {
+  top: 60%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -2022,6 +2044,7 @@ body.dark {
 }
 
 .life-section .swiper .swiper-button-prev {
+  top: 60%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
