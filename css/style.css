@@ -2713,6 +2713,7 @@ body.dark {
 
   .header__logo img {
     width: 100%;
+    display: none;
   }
 
   .header-contacts {
@@ -2725,6 +2726,6 @@ body.dark {
 
   .nav__search {
     height: 35px;
-    max-width: 45px;
+    max-width: 205px;
   }
 }
