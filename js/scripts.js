@@ -1,10 +1,12 @@
 let menuBtn = document.querySelector('.menu-btn');
+let menuBtnOpen = document.querySelector('.menu-btn__open');
+let menuText = document.querySelector('.menu-text')
 let menu = document.querySelector('.nav--left');
 let menuItem = document.querySelectorAll('.nav__link--left');
 let dropLang = document.querySelector('.dropdown');
 let dropContent = dropLang.querySelector('.dropdown-content');
-let splide = new Splide('.splide');
-let bar = splide.root.querySelector('.my-slider-progress-bar');
+// let splide = new Splide('.splide');
+// let bar = splide.root.querySelector('.my-slider-progress-bar');
 
 
 
@@ -18,18 +20,18 @@ dropLang.addEventListener('click', function() {
 
 menuBtn.addEventListener('click', function() {
     menuBtn.classList.toggle('active');
+    menuBtnOpen.classList.toggle('active');
+    menuText.classList.toggle('active');
     menu.classList.toggle('active');
-    if (menuBtn.classList.contains('active')) {
-        menuBtn.style.position = "relative";
-        menuBtn.style.left = "-200px";
-    } else {
-        menuBtn.style.left = "5px";
-    }
 })
 
-dropLang.addEventListener('click', function() {
-    dropLang.classList.toggle('active');
-})
+menuBtnOpen.addEventListener('click', function() {
+    menuBtnOpen.classList.remove('active');
+    menu.classList.remove('active');
+    menuText.classList.remove('active');
+    menuBtn.classList.remove('active');
+});
+
 
 
 
@@ -42,19 +44,19 @@ menuItem.forEach(function(menuItem) {
 
 
 
-splide.on('mounted move', function() {
-    var end = splide.Components.Controller.getEnd() + 1;
-    var rate = Math.min((splide.index + 1) / end, 1);
+// splide.on('mounted move', function() {
+//     var end = splide.Components.Controller.getEnd() + 1;
+//     var rate = Math.min((splide.index + 1) / end, 1);
 
-    // Check if bar is not null before accessing its style property.
-    if (bar) {
-        bar.style.width = String(100 * rate) + '%';
-    } else {
-        console.log("Error: 'bar' is null");
-    }
-});
+//     // Check if bar is not null before accessing its style property.
+//     if (bar) {
+//         bar.style.width = String(100 * rate) + '%';
+//     } else {
+//         console.log("Error: 'bar' is null");
+//     }
+// });
 
-splide.mount();
+// splide.mount();
 
 
 // Num counter
