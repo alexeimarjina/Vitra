@@ -1,17 +1,14 @@
 .category-section {
     margin-top: 25px;
     &__container {
-        max-width: 1046px;
-        padding: 0;
+        padding: 0 0 0 100px;
     }
 }
 
 .category-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
     &__card {
-        grid-template-columns: repeat(4, 1fr);
         width: 260px;
         padding-top: 300px;
         display: flex;
@@ -23,9 +20,32 @@
     }
     &__retail {
         background-image: url('../img/category1.jpg');
+        .category-text__container-retail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 3px solid #ee2a26;
+            transition: .3s ease-in-out;
+        }
+        &:hover .category-text__container-retail {
+            transition: .3s ease-in-out;
+            background: linear-gradient(transparent, #ff5c59 91%);
+        }
     }
     &__logistics {
         background-image: url('../img/category2.jpg');
+        .category-text__container-logistics {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 3px solid #30a1d2;
+        }
+        &:hover .category-text__container-logistics {
+            transition: .3s ease-in-out;
+            background: linear-gradient(transparent, #30a2d2be 91%);
+        }
     }
     &__horeca {
         background-image: url('../img/category3.jpg');
@@ -42,8 +62,8 @@
         padding-bottom: 10px;
     }
     &__arrow {
-        width: 50px;
-        height: 50px;
+        width: 38px;
+        height: 38px;
         margin-right: 15px;
         margin-bottom: 10px;
     }
@@ -51,42 +71,59 @@
 
 .category-counter {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 25px;
+    display: flex;
+    justify-content: space-between;
     &__cards {
+        position: relative;
         display: flex;
         align-items: center;
         width: 260px;
         height: 50px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: #e0e0e0;
+            bottom: -15px;
+        }
         &-img {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 50px;
             height: 50px;
+            box-shadow: rgba(0, 0, 0, .25) 0px 7px 28px 0px;
             img {
                 width: 29px;
                 height: 33px;
             }
         }
         .cards__counter {
-            position: relative;
+            padding-left: 15px;
             .counter {
                 display: flex;
-                align-items: flex-end;
                 &__number {
-                    font-size: 30px;
+                    font-size: 36px;
                     padding-right: 10px;
                     color: #454545;
                 }
                 &__text {
-                    font-size: 16px;
+                    font-family: 'GalanoGrotesque-Light', sans-serif;
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 18px;
                     color: #454545;
                     text-transform: uppercase;
+                    &-center {
+                        font-size: 36px;
+                        color: #454545;
+                        align-items: center;
+                    }
                 }
             }
             &-text {
+                font-family: 'GalanoGrotesque-Light', sans-serif;
                 font-size: 16px;
                 color: #454545;
             }

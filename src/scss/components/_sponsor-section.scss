@@ -1,0 +1,32 @@
+.sponsor-section {
+    margin-bottom: 85px;
+    &__container {
+        padding-right: 0;
+        padding-left: 100px;
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+        .sponsor-img {
+            height: 115px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f3f3;
+            filter: grayscale(100%);
+            transition: .3s ease;
+            img {
+                width: 115px;
+                transition: .3s ease;
+            }
+            &:hover {
+                transition: .3s ease;
+                filter: grayscale(0%);
+                &:hover img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

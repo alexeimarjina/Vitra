@@ -1,0 +1,40 @@
+.offer-section {
+    margin-bottom: 85px;
+    &__container {
+        padding: 0 0 0 100px;
+    }
+    &__body {
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.200) 0 10px 40px;
+        &-img {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text {
+            padding: 40px 35px 30px 60px;
+            &--title {
+                font-family: 'GalanoGrotesque-Light', sans-serif;
+                font-size: 36px;
+            }
+            .title-span {
+                font-family: 'GalanoGrotesque-Bold', sans-serif;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.offer-body__text-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+    &-subinfo {
+        max-width: 305px;
+        font-family: 'GalanoGrotesque-Light', sans-serif;
+        font-size: 16px;
+        color: #454545;
+    }
+}

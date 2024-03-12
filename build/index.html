@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitra</title>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="main__body">
     <!-- Header -->
-     <header class="header">
+    <header class="header">
     <div class="header__top header-contacts">
         <div class="container">
             <a href="mailto:info@vitra.md" class="contacts__email">info@vitra.md</a>
@@ -32,7 +33,22 @@
         </div>
         <div class="nav__left--menu">
             <nav class="nav--left">
-                <img src="../img/logo2-header.png" alt="" class="nav--left__img">
+                <div class="menu-btn__open-body">
+                    <div class="menu-btn__open">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <img src="../img/logo2-header.png" alt="" class="nav--left__img">
+                </div>
+                <nav class="nav--left__mainmenu">
+                    <ul class="nav--left__ul">
+                        <li class="nav--left__link"><a href="">Solutii</a></li>
+                        <li class="nav--left__link"><a href="">Portfoliu</a></li>
+                        <li class="nav--left__link"><a href="">Companie</a></li>
+                        <li class="nav--left__link"><a href="">Contacte</a></li>
+                    </ul>
+                </nav>
                 <ul class="nav__list--left">
                     <li class="nav__list-item"><a class="nav__link--left bkgclr1" href="#">Retail</a>
                         <ul class="nav__link--sublist">
@@ -120,8 +136,73 @@
 </header>
     <!-- Main Page -->
     <main>
-        <section class="main--section">
-    <div class="splide" id="slider">
+        <section class="main-section">
+    <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(../img/main-bkg.jpg)">
+                <div class="container swiper-container">
+                    <h1 class="swiper-title">Micromarket</h1>
+                    <p class="swiper-text">CONVENIQ este o soluție perfectă de instalat în locații cu trafic intens, îmbunătățind vânzările impulsive și oportunitățile de livrare pe ultimul kilometru.</p>
+                    <a href="" class="swiper-btn custom-btn">Vezi Produsul</a>
+                    <div class="swiper-video">
+                        <button class="swiper-video__img"><img src="../img/Layer 1074.jpg" alt="" ></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../img/main-bkg.jpg)">
+                <div class="container swiper-container">
+                    <h1 class="swiper-title">Micromarket</h1>
+                    <p class="swiper-text">CONVENIQ este o soluție perfectă de instalat în locații cu trafic intens, îmbunătățind vânzările impulsive și oportunitățile de livrare pe ultimul kilometru.</p>
+                    <a href="" class="swiper-btn custom-btn">Vezi Produsul</a>
+                    <div class="swiper-video">
+                        <button class="swiper-video__img"><img src="../img/Layer 1074.jpg" alt="" ></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../img/main-bkg.jpg)">
+                <div class="container swiper-container">
+                    <h1 class="swiper-title">Micromarket</h1>
+                    <p class="swiper-text">CONVENIQ este o soluție perfectă de instalat în locații cu trafic intens, îmbunătățind vânzările impulsive și oportunitățile de livrare pe ultimul kilometru.</p>
+                    <a href="" class="swiper-btn custom-btn">Vezi Produsul</a>
+                    <div class="swiper-video">
+                        <button class="swiper-video__img"><img src="../img/Layer 1074.jpg" alt="" ></button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(../img/main-bkg.jpg)">
+                <div class="container swiper-container">
+                    <h1 class="swiper-title">Micromarket</h1>
+                    <p class="swiper-text">CONVENIQ este o soluție perfectă de instalat în locații cu trafic intens, îmbunătățind vânzările impulsive și oportunitățile de livrare pe ultimul kilometru.</p>
+                    <a href="" class="swiper-btn custom-btn">Vezi Produsul</a>
+                    <div class="swiper-video">
+                        <button class="swiper-video__img"><img src="../img/Layer 1074.jpg" alt="" ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-buttons__bottom container buttons-bottom__container">
+            <div class="append-buttons">
+                <div class="append-buttons__body">
+                    <a href="#" class="append-buttons__text buttons-slide1">Produse <span>Micromarket</span></a>
+                    <a href="#" class="append-buttons__text buttons-slide2">Promotii <span>Runden</span></a>
+                    <a href="#" class="append-buttons__text buttons-slide3">Portofoliu <span>Azamet
+                    Group</span></a>
+                    <a href="#" class="append-buttons__text buttons-slide4">News <span>New equipment colors</span>
+                        <h3/>
+                </div>
+            </div>
+        </div>
+        <div class="swipper-scrollbar__body container">
+            <div class="swiper-scrollbar container">
+                <div class="swiper-scrollbar-drag swiper-scrollbar-drag-life"></div>
+            </div>
+            <div class="swipper-scrollbar__body-arrows">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="splide" id="slider">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
@@ -129,7 +210,7 @@
                         <h2 class="splide__title">Micromarket</h2>
                         <p class="splide__text">CONVENIQ este o soluție perfectă de instalat în locații cu trafic intens, îmbunătățind vânzările impulsive și oportunitățile de livrare pe ultimul kilometru.</p>
                         <a href="#" class="splide__link">Vezi Produsul</a>
-                    </div>
+                </div>
                 </li>
                 <li class="splide__slide">
                     <div class="container splide__wrapper">
@@ -152,112 +233,43 @@
                         <a href="#" class="splide__link">Vezi Produsul</a>
                     </div>
                 </li>
-            </ul>
-            <div class="splide__wrapper">
-                <div class="my-slider-progress">
-                    <div class="my-slider-progress-bar"></div>
-                </div>
-                <div class="splide__progress-text splide__wrapper">
-                    <div class="splide__progres-text--body">
-                        <h4 class="splide__progress-text-title">Produse</h4>
-                        <p class="splide__progress-text-subinfo">Micromarket</p>
+                </ul>
+                <div class="splide__wrapper">
+                    <div class="my-slider-progress">
+                        <div class="my-slider-progress-bar"></div>
                     </div>
-                    <div class="splide__progres-text--body">
-                        <h4 class="splide__progress-text-title">Promotii</h4>
-                        <p class="splide__progress-text-subinfo">Runden</p>
-                    </div>
-                    <div class="splide__progres-text--body">
-                        <h4 class="splide__progress-text-title">Portofoliu</h4>
-                        <p class="splide__progress-text-subinfo">Azamet Group
-                        </p>
-                    </div>
-                    <div class="splide__progres-text--body">
-                        <h4 class="splide__progress-text-title">News</h4>
-                        <p class="splide__progress-text-subinfo">New equipment colors
-                        </p>
+                    <div class="splide__progress-text splide__wrapper">
+                        <div class="splide__progres-text--body">
+                            <h4 class="splide__progress-text-title">Produse</h4>
+                            <p class="splide__progress-text-subinfo">Micromarket</p>
+                        </div>
+                        <div class="splide__progres-text--body">
+                            <h4 class="splide__progress-text-title">Promotii</h4>
+                            <p class="splide__progress-text-subinfo">Runden</p>
+                        </div>
+                        <div class="splide__progres-text--body">
+                            <h4 class="splide__progress-text-title">Portofoliu</h4>
+                            <p class="splide__progress-text-subinfo">Azamet Group
+                            </p>
+                        </div>
+                        <div class="splide__progres-text--body">
+                            <h4 class="splide__progress-text-title">News</h4>
+                            <p class="splide__progress-text-subinfo">New equipment colors
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section> <section class="category-section">
-    <div class="container category-section__container">
-        <div class="category-body">
-            <a href="#" class="category-body__card category-body__retail">
-                <h3 class="category-body__title">Retail</h3>
-                <img src="../img/arrow-circle.svg" alt="Arrow" class="category-body__arrow">
-            </a>
-            <a href="#" class="category-body__card category-body__logistics">
-                <h3 class="category-body__title">Logistics</h3>
-                <img src="../img/arrow-circle.svg" alt="Arrow" class="category-body__arrow">
-            </a>
-            <a href="#" class="category-body__card category-body__horeca">
-                <h3 class="category-body__title">Horeca</h3>
-                <img src="../img/arrow-circle.svg" alt="Arrow" class="category-body__arrow">
-            </a>
-            <a href="#" class="category-body__card category-body__life">
-                <h3 class="category-body__title">Life</h3>
-                <img src="../img/arrow-circle.svg" alt="Arrow" class="category-body__arrow">
-            </a>
-        </div>
-        <div class="category-counter">
-            <div class="category-counter__cards">
-                <div class="category-counter__cards-img">
-                    <img src="../img/counter-img1.png" alt="">
-                </div>
-                <div class="cards__counter">
-                    <div class="counter">
-                        <div class="counter__number" id="num1"></div>
-                        <p class="counter__text">ani</p>
-                    </div>
-                    <p class="cards__counter-text">Activitate</p>
-                </div>
-            </div>
-            <div class="category-counter__cards">
-                <div class="category-counter__cards-img">
-                    <img src="../img/counter-img2.png" alt="">
-                </div>
-                <div class="cards__counter">
-                    <div class="counter">
-                        <div class="counter__number" id="num2"></div>
-                        <p class="counter__text">+</p>
-                    </div>
-                    <p class="cards__counter-text">Profesionisti</p>
-                </div>
-            </div>
-            <div class="category-counter__cards">
-                <div class="category-counter__cards-img">
-                    <img src="../img/counter-img3.png" alt="">
-                </div>
-                <div class="cards__counter">
-                    <div class="counter">
-                        <div class="counter__number" id="num3"></div>
-                        <p class="counter__text">+</p>
-                    </div>
-                    <p class="cards__counter-text">Proiecte</p>
-                </div>
-            </div>
-            <div class="category-counter__cards">
-                <div class="category-counter__cards-img">
-                    <img src="../img/counter-img4.png" alt="">
-                </div>
-                <div class="cards__counter">
-                    <div class="counter">
-                        <div class="counter__number" id="num4"></div>
-                        <p class="counter__text">+</p>
-                    </div>
-                    <p class="cards__counter-text">Produse</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+        </div> -->
 </section>
+        
+        
     </main>
     <!-- Footer -->
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>
