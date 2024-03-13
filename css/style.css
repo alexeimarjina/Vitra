@@ -167,6 +167,7 @@ body.dark {
 }
 
 .header__container .menu-btn__body {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,12 +427,11 @@ body.dark {
 }
 
 .header__logo {
-  height: 22px;
-  margin-left: 52px;
+  margin-right: 60px;
 }
 
 .header__logo img {
-  width: 143px;
+  width: 100%;
 }
 
 .header__wishlist {
@@ -444,7 +444,6 @@ body.dark {
 }
 
 .header__wishlist-cart {
-  background-image: url(../img/cart.svg);
   margin-right: 18px;
 }
 
@@ -469,7 +468,6 @@ body.dark {
 }
 
 .header__wishlist-login {
-  background-image: url(../img/login.svg);
   margin-right: 12px;
 }
 
@@ -556,14 +554,6 @@ body.dark {
   background-color: var(--color-primary);
   text-align: right;
   font-size: 14px;
-  background-size: 16px 16px;
-}
-
-.header-contacts .contacts__email,
-.header-contacts .contacts__phone {
-  background-repeat: no-repeat;
-  background-position: left center;
-  letter-spacing: 1px;
 }
 
 .header-contacts .contacts__email {
@@ -571,9 +561,21 @@ body.dark {
   margin-right: 32px;
 }
 
+.header-contacts .contacts__email img {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
 .header-contacts .contacts__phone {
-  background-image: url(../img/phone.svg);
   padding-left: 25px;
+}
+
+.header-contacts .contacts__phone img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
 }
 
 .header-contacts a {
@@ -625,33 +627,40 @@ body.dark {
 
 .main-section .swiper .swipper-scrollbar__body {
   position: relative;
-  margin-right: 280px;
+  margin-right: 361px;
 }
 
 .main-section .swiper .swipper-scrollbar__body-arrows {
   position: absolute;
-  right: 0;
-  bottom: 70px;
+  right: 110px;
+  bottom: 40px;
 }
 
 .main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-next {
-  font-size: 30px;
   color: #fff;
-  right: -80px;
+  right: -100px;
+}
+
+.main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-next::after {
+  font-size: 30px;
 }
 
 .main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-prev {
-  font-size: 30px;
   color: #fff;
+}
+
+.main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-prev::after {
+  font-size: 30px;
 }
 
 .main-section .swiper-buttons__bottom {
   position: relative;
   padding-right: 0;
-  padding-left: 165px;
+  padding-left: 100px;
 }
 
 .main-section .swiper-buttons__bottom .append-buttons {
+  max-width: 1000px;
   position: absolute;
   bottom: 50px;
   z-index: 2;
@@ -689,14 +698,14 @@ body.dark {
 }
 
 .main-section .swiper-scrollbar {
-  bottom: 70px;
-  max-width: 1030px;
+  bottom: 40px;
+  max-width: 1000px;
   padding: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #fff;
+  background: #fff;
 }
 
 .main-section .swiper-scrollbar-drag {
@@ -713,7 +722,7 @@ body.dark {
 
 .main-section .swiper-container {
   padding-right: 0;
-  padding-left: 160px;
+  padding-left: 100px;
 }
 
 .main-section .swiper-video {
@@ -724,11 +733,36 @@ body.dark {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
+  position: relative;
 }
 
 .main-section .swiper-video__img {
   border-radius: 50%;
   overflow: hidden;
+}
+
+.main-section .swiper-video__img::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  top: 60px;
+  right: 65px;
+  border: 1px solid #ffffff;
+  background: inherit;
+  border-radius: 5px;
+}
+
+.main-section .swiper-video__img::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  top: 60px;
+  right: 85px;
+  border: 1px solid #ffffff;
+  background: inherit;
+  border-radius: 5px;
 }
 
 .main-section .swiper-title {
@@ -753,10 +787,6 @@ body.dark {
   height: 50px;
   text-align: center;
   margin-bottom: 10px;
-}
-
-.category-section {
-  margin-top: 25px;
 }
 
 .category-section__container {
@@ -2649,7 +2679,7 @@ body.dark {
 
 @media (max-width: 1449.98px) {
   .container {
-    max-width: 1200px;
+    max-width: 1080px;
   }
 }
 
@@ -2721,11 +2751,6 @@ body.dark {
   .header__container .nav--left {
     z-index: 1;
     width: 100%;
-  }
-
-  .header__logo img {
-    width: 100%;
-    display: none;
   }
 
   .header-contacts {
