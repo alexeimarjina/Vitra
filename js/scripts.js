@@ -52,42 +52,42 @@ const mainSwiper = new Swiper('.main-swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    virtual: {
-        slides: (function() {
-            const slides = [];
-            for (var i = 0; i < 4; i += 1) {
-                slides.push('Slide ' + (i + 1));
-            }
-            return slides;
-        })(),
-    },
+    // virtual: {
+    // slides: (function() {
+    //     const slides = [];
+    //     for (var i = 0; i < 2; i += 1) {
+    //         slides.push('Slide ' + (i + 1));
+    //     }
+    //     return slides;
+    // })(),
+    // },
 });
 
 document
     .querySelector('.buttons-slide1')
     .addEventListener('click', function(e) {
         e.preventDefault();
-        swiper.slideTo(0, 0);
+        mainSwiper.slideTo(0, 0);
     });
 
 document
     .querySelector('.buttons-slide2')
     .addEventListener('click', function(e) {
         e.preventDefault();
-        swiper.slideTo(1, 0);
+        mainSwiper.slideTo(1, 0);
     });
 
 document
     .querySelector('.buttons-slide3')
     .addEventListener('click', function(e) {
         e.preventDefault();
-        swiper.slideTo(2, 0);
+        mainSwiper.slideTo(2, 0);
     });
 document
     .querySelector('.buttons-slide4')
     .addEventListener('click', function(e) {
         e.preventDefault();
-        swiper.slideTo(3, 0);
+        mainSwiper.slideTo(3, 0);
     });
 
 
