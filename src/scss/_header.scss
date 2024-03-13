@@ -18,6 +18,7 @@
                 width: 95%;
             }
             .menu-btn__body {
+                cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -235,14 +236,10 @@
             }
         }
         &__logo {
-            height: 22px;
-            margin-left: 52px;
+            margin-right: 60px;
             img {
-                width: 143px;
-                @media(max-width: $breakpoint480) {
-                    width: 100%;
-                    display: none;
-                }
+                width: 100%;
+                @media(max-width: $breakpoint480) {}
             }
             @media(max-width: $breakpoint1025) {
                 margin-left: 0;
@@ -255,7 +252,6 @@
             object-fit: cover;
             position: relative;
             &-cart {
-                background-image: url(../img/cart.svg);
                 margin-right: 18px;
                 &::before {
                     content: '3';
@@ -274,7 +270,6 @@
                 }
             }
             &-login {
-                background-image: url(../img/login.svg);
                 margin-right: 12px;
             }
         }
@@ -343,18 +338,16 @@
         background-color: var(--color-primary);
         text-align: right;
         font-size: 14px;
-        background-size: 16px 16px;
         @media(max-width: $breakpoint480) {
             font-size: 12px;
         }
-        .contacts__email,
-        .contacts__phone {
-            background-repeat: no-repeat;
-            background-position: left center;
-            letter-spacing: 1px;
-        }
         .contacts__email {
-            // background-image: url(../img/mail.svg);
+            img {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
             padding-left: 35px;
             margin-right: 32px;
             @media(max-width: $breakpoint480) {
@@ -362,8 +355,12 @@
             }
         }
         .contacts__phone {
-            background-image: url(../img/phone.svg);
             padding-left: 25px;
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
         }
         a {
             color: var(--color-black);
