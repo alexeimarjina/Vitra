@@ -629,7 +629,7 @@ body.dark {
 
 .main-section .swiper .swipper-scrollbar__body {
   position: relative;
-  margin-right: 361px;
+  margin-right: 401px;
 }
 
 .main-section .swiper .swipper-scrollbar__body-arrows {
@@ -658,11 +658,10 @@ body.dark {
 .main-section .swiper-buttons__bottom {
   position: relative;
   padding-right: 0;
-  padding-left: 100px;
 }
 
 .main-section .swiper-buttons__bottom .append-buttons {
-  max-width: 1000px;
+  max-width: 1090px;
   position: absolute;
   bottom: 50px;
   z-index: 2;
@@ -701,7 +700,7 @@ body.dark {
 
 .main-section .swiper-scrollbar {
   bottom: 40px;
-  max-width: 1000px;
+  max-width: 1090px;
   padding: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -725,7 +724,6 @@ body.dark {
 
 .main-section .swiper-container {
   padding-right: 0;
-  padding-left: 100px;
 }
 
 .main-section .swiper-video {
