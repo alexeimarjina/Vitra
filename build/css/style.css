@@ -167,6 +167,8 @@ body.dark {
 }
 
 .header__container .menu-btn__body {
+  position: fixed;
+  left: 250px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,7 +429,7 @@ body.dark {
 }
 
 .header__logo {
-  margin-right: 60px;
+  margin-right: 210px;
 }
 
 .header__logo img {
@@ -718,6 +720,7 @@ body.dark {
   background-repeat: no-repeat;
   padding-top: 250px;
   padding-bottom: 240px;
+  margin-right: -15px;
 }
 
 .main-section .swiper-container {

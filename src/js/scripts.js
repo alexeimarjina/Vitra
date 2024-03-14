@@ -47,7 +47,6 @@ menuItem.forEach(function(menuItem) {
 const mainSwiper = new Swiper('.main-swiper', {
     slidesPerView: 1,
     centeredSlides: true,
-    pagination: false,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

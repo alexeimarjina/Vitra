@@ -18,6 +18,8 @@
                 width: 95%;
             }
             .menu-btn__body {
+                position: fixed;
+                left: 250px;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
@@ -236,7 +238,7 @@
             }
         }
         &__logo {
-            margin-right: 60px;
+            margin-right: 210px;
             img {
                 width: 100%;
                 @media(max-width: $breakpoint480) {}
