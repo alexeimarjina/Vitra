@@ -14,8 +14,19 @@
             padding-top: 15px;
             padding-bottom: 15px;
             width: 100%;
+            @media (max-width: 1280px) {
+                justify-content: space-evenly;
+            }
             @media(max-width: $breakpoint1025) {
                 width: 95%;
+                justify-content: space-between;
+            }
+            @media(max-width: 685px) {
+                justify-content: flex-end;
+                gap: 15px;
+            }
+            @media(max-width: $breakpoint480) {
+                gap: 5px;
             }
             .menu-btn__body {
                 position: fixed;
@@ -25,6 +36,12 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                @media (max-width: 1816px) {
+                    left: 120px;
+                }
+                @media (max-width: 1576px) {
+                    left: 30px;
+                }
                 .menu-btn__body--text {
                     color: #fff;
                     font-size: 14px;
@@ -48,7 +65,7 @@
                     transition: .3s ease-in-out;
                     @media(max-width: $breakpoint480) {
                         top: -5px;
-                        left: 0;
+                        left: -20px;
                     }
                     .bar {
                         width: 17px;
@@ -95,15 +112,16 @@
                 transform: translateX(-100%);
                 transition: transform 0.5s;
                 @media(max-width: $breakpoint768) {
-                    width: 45%;
-                }
-                @media(max-width: $breakpoint480) {
-                    z-index: 1;
                     width: 100%;
+                    z-index: 1;
                 }
                 .menu-btn__open-body {
                     display: flex;
                     padding: 15px 5px;
+                    @media(max-width: $breakpoint768) {
+                        width: 100%;
+                        padding: 0;
+                    }
                 }
                 &.active {
                     overflow: scroll;
@@ -126,6 +144,10 @@
                     z-index: 2;
                     overflow: hidden;
                     transition: .3s ease-in-out;
+                    @media(max-width: $breakpoint768) {
+                        position: absolute;
+                        right: 0;
+                    }
                     .bar {
                         width: 17px;
                         height: 2px;
@@ -165,6 +187,7 @@
                         display: none;
                         @media(max-width: $breakpoint768) {
                             display: block;
+                            padding-top: 50px;
                             padding-left: 35px;
                         }
                         .nav--left__link {
@@ -174,6 +197,9 @@
                                 font-family: 'GalanoGrotesque-Bold', sans-serif;
                                 color: #000;
                                 padding-bottom: 15px;
+                                @media(max-width: $breakpoint768) {
+                                    padding-bottom: 25px;
+                                }
                             }
                         }
                     }
@@ -226,6 +252,9 @@
                             }
                             &:not(:last-child) {
                                 padding-bottom: 15px;
+                                @media(max-width: $breakpoint768) {
+                                    padding-bottom: 25px;
+                                }
                             }
                         }
                     }
@@ -234,11 +263,18 @@
                     position: absolute;
                     right: 50%;
                     top: 20px;
+                    @media(max-width: $breakpoint768) {
+                        top: 10px;
+                        left: 5%;
+                    }
                 }
             }
         }
         &__logo {
             margin-right: 210px;
+            @media (max-width: 1403px) {
+                margin-right: 0;
+            }
             img {
                 width: 100%;
                 @media(max-width: $breakpoint480) {}
@@ -278,6 +314,13 @@
         &__utilities {
             display: flex;
             margin-left: 14px;
+            @media(max-width: 685px) {
+                gap: 15px;
+                margin-left: 0;
+            }
+            @media(max-width: $breakpoint480) {
+                gap: 5px;
+            }
             .dropbtn {
                 background-color: #04AA6D;
                 color: white;
@@ -383,8 +426,11 @@
             }
             &:not(:last-child) {
                 padding-right: 31px;
+                @media (max-width: 1050px) {
+                    padding-right: 21px;
+                }
             }
-            @media(max-width: $breakpoint768) {
+            @media(max-width: $breakpoint1025) {
                 display: none;
             }
         }
@@ -397,12 +443,19 @@
             background-repeat: no-repeat;
             background-size: 20px;
             background-position: right 13px center;
+            @media (max-width: 1280px) {
+                width: 210px;
+            }
             @media(max-width: $breakpoint1025) {
                 max-width: 200px;
             }
+            @media(max-width: 685px) {
+                max-width: 50px;
+                background-color: transparent;
+            }
             @media(max-width: $breakpoint480) {
                 height: 35px;
-                max-width: 205px;
+                max-width: 50px;
             }
         }
     }

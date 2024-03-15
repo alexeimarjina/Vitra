@@ -1,14 +1,16 @@
 .sponsor-section {
     margin-bottom: 85px;
-    &__container {
-        padding-right: 0;
-        padding-left: 100px;
-    }
     &__body {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 15px;
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        // gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        align-items: center;
         .sponsor-img {
+            width: calc(20% - 5px);
             height: 115px;
             display: flex;
             justify-content: center;
@@ -16,6 +18,15 @@
             background: #f3f3f3;
             filter: grayscale(100%);
             transition: .3s ease;
+            @media (max-width: $breakpoint1025) {
+                width: calc(25% - 5px);
+            }
+            @media (max-width: $breakpoint768) {
+                width: calc(50% - 5px);
+            }
+            @media (max-width: $breakpoint480) {
+                width: 100%;
+            }
             img {
                 width: 115px;
                 transition: .3s ease;

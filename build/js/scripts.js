@@ -6,17 +6,31 @@ let menuItem = document.querySelectorAll('.nav__link--left');
 let dropLang = document.querySelector('.dropdown');
 let dropContent = dropLang.querySelector('.dropdown-content');
 
+
+// window.addEventListener('scroll', function() {
+//     var scrollPosition = window.scrollY || window.pageYOffset;
+
+//     if (scrollPosition >= 145) {
+//         document.querySelector('.menu-btn__body').classList.add('scrolled');
+//     } else {
+//         document.querySelector('.menu-btn__body').classList.remove('scrolled');
+//     }
+// });
+
+
 // let splide = new Splide('.splide');
 // let bar = splide.root.querySelector('.my-slider-progress-bar');
-
-
-
-
 
 dropLang.addEventListener('click', function() {
     dropContent.classList.toggle('active');
 });
 
+menuItem.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function() {
+        menuBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+    })
+})
 
 
 menuBtn.addEventListener('click', function() {
@@ -33,15 +47,6 @@ menuBtnOpen.addEventListener('click', function() {
     menuBtn.classList.remove('active');
 });
 
-
-
-
-menuItem.forEach(function(menuItem) {
-    menuItem.addEventListener('click', function() {
-        menuBtn.classList.toggle('active');
-        menu.classList.toggle('active');
-    })
-})
 
 
 const mainSwiper = new Swiper('.main-swiper', {
