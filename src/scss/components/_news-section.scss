@@ -21,6 +21,9 @@
         background-color: #f5f5f5;
         transition: .3 ease-in-out;
         @media (max-width: $breakpoint768) {
+            width: calc(50% - 20px);
+        }
+        @media (max-width: $breakpoint480) {
             width: 100%;
         }
         &:hover {

@@ -13,26 +13,54 @@ window.addEventListener('scroll', function() {
     if (scrollPosition >= 35) {
         document.querySelector('.header__container').classList.add('scrolled');
         document.querySelector('.header__container').style.top = '0';
-        
+        document.querySelector('.nav--left').style.top = '0';
     } else {
         document.querySelector('.header__container').classList.remove('scrolled');
         document.querySelector('.header__container').style.top = '';
+        document.querySelector('.nav--left').style.top = '';
+    }
+});
+
+window.addEventListener('scroll', function(){
+    var firstSection = document.querySelector('.main-section');
+    var firstSectionHeight = firstSection.offsetHeight;
+    var burgerSpans = document.querySelectorAll('.bar');
+    var burgerText = document.querySelector('.menu-btn__body--text');
+
+    // Check if the width of the viewport is less than or equal to 1024
+    if (window.innerWidth <= 1024) {
+        return; // Exit the function if condition is met
+    }
+
+    if (window.scrollY > firstSectionHeight) {
+        burgerSpans.forEach(function(span) {
+            span.style.backgroundColor = '#000';
+        });
+        burgerText.style.color = '#000';
+    }
+    else {
+        burgerSpans.forEach(function(span) {
+            span.style.backgroundColor = '';
+        });
+        burgerText.style.color = '';
     }
 });
 
 
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY || window.pageYOffset;
 
-    if (scrollPosition >= 35) {
-        document.querySelector('.header__container').classList.add('scrolled');
-        document.querySelector('.header__container').style.top = '0';
-        
-    } else {
-        document.querySelector('.header__container').classList.remove('scrolled');
-        document.querySelector('.header__container').style.top = '';
-    }
-});
+
+// window.addEventListener('scroll', function() {
+//     var scrollPosition = window.scrollY || window.pageYOffset;
+
+//     if (scrollPosition >= 35) {
+//         document.querySelector('.header__container').classList.add('scrolled');
+//         document.querySelector('.header__container').style.top = '0';
+
+//     } else {
+//         document.querySelector('.header__container').classList.remove('scrolled');
+//         document.querySelector('.header__container').style.top = '';
+//     }
+// });
 
 
 // let splide = new Splide('.splide');

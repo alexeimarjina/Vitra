@@ -4,6 +4,18 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+        width: 100%;
+        @media (max-width: $breakpoint768) {
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column-reverse;
+            // align-items: flex-start;
+        }
+        @media (max-width: $breakpoint768) {
+            width: calc(100% - 20px);
+            display: flex;
+            align-content: center;
+        }
     }
     &-category {
         &__title {
