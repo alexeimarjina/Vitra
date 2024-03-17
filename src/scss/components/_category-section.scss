@@ -17,65 +17,6 @@
         @media (max-width: 660px) {
             width: 100%;
         }
-        .category-counter__cards {
-            position: relative;
-            display: flex;
-            align-items: center;
-            margin-top: 30px;
-            &::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 1px;
-                background: #e0e0e0;
-                bottom: -15px;
-            }
-            @media (max-width: 660px) {
-                justify-content: center;
-                align-items: center;
-            }
-            &-img {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 50px;
-                height: 50px;
-                box-shadow: rgba(0, 0, 0, .25) 0px 7px 28px 0px;
-                img {
-                    width: 29px;
-                    height: 33px;
-                }
-            }
-            .cards__counter {
-                padding-left: 15px;
-                .counter {
-                    display: flex;
-                    &__number {
-                        font-size: 36px;
-                        padding-right: 10px;
-                        color: #454545;
-                    }
-                    &__text {
-                        font-family: 'GalanoGrotesque-Light', sans-serif;
-                        display: flex;
-                        align-items: flex-end;
-                        font-size: 18px;
-                        color: #454545;
-                        text-transform: uppercase;
-                        &-center {
-                            font-size: 36px;
-                            color: #454545;
-                            align-items: center;
-                        }
-                    }
-                }
-                &-text {
-                    font-family: 'GalanoGrotesque-Light', sans-serif;
-                    font-size: 16px;
-                    color: #454545;
-                }
-            }
-        }
     }
     &__card {
         padding-top: 300px;
@@ -136,6 +77,88 @@
         height: 38px;
         margin-right: 15px;
         margin-bottom: 10px;
+    }
+    
+}
+
+.category-counter__cards-body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media (max-width: 660px) {
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    .category-counter__cards {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        width: calc(25% - 20px);
+        @media (max-width: $breakpoint1025) {
+            width: calc(50% - 20px);
+        }
+        @media (max-width: 660px) {
+            width: 40%;
+        }
+        @media (max-width: $breakpoint480) {
+            width: 100%;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: #e0e0e0;
+            bottom: -15px;
+        }
+        @media (max-width: 660px) {
+            justify-content: center;
+            align-items: center;
+        }
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, .25) 0px 7px 28px 0px;
+            img {
+                width: 29px;
+                height: 33px;
+            }
+        }
+        .cards__counter {
+            padding-left: 15px;
+            .counter {
+                display: flex;
+                &__number {
+                    font-size: 36px;
+                    padding-right: 10px;
+                    color: #454545;
+                }
+                &__text {
+                    font-family: 'GalanoGrotesque-Light', sans-serif;
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 18px;
+                    color: #454545;
+                    text-transform: uppercase;
+                    &-center {
+                        font-size: 36px;
+                        color: #454545;
+                        align-items: center;
+                    }
+                }
+            }
+            &-text {
+                font-family: 'GalanoGrotesque-Light', sans-serif;
+                font-size: 16px;
+                color: #454545;
+            }
+        }
     }
 }
 
