@@ -100,6 +100,9 @@ const mainSwiper = new Swiper('.main-swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
     // virtual: {
     // slides: (function() {
     //     const slides = [];
