@@ -91,6 +91,8 @@
             @media (max-width: $breakpoint480) {
                 padding-top: 170px;
                 padding-bottom: 120px;
+                margin-right: 0;
+                // max-width: 100%;
             }
         }
         &-container {

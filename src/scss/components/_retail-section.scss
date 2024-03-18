@@ -17,6 +17,9 @@
                 .swiper-slide {
                     max-width: 320px;
                     height: 360px;
+                    @media (max-width: $breakpoint480) {
+                        max-width: 100%;
+                    }
                     img {
                         display: block;
                         width: 100%;
@@ -28,18 +31,27 @@
                         background-size: 320px 320px;
                         background-repeat: no-repeat;
                         object-fit: cover;
+                        @media (max-width: $breakpoint480) {
+                            background-size: 100% 320px;
+                        }
                     }
                     &__img2 {
                         background-image: url(../../img/retail-solution2.jpg);
                         background-size: 320px 320px;
                         background-repeat: no-repeat;
                         object-fit: cover;
+                        @media (max-width: $breakpoint480) {
+                            background-size: 100% 320px;
+                        }
                     }
                     &__img3 {
                         background-image: url(../../img/retail-solution3.jpg);
                         background-size: 320px 320px;
                         background-repeat: no-repeat;
                         object-fit: cover;
+                        @media (max-width: $breakpoint480) {
+                            background-size: 100% 320px;
+                        }
                     }
                     &__text {
                         opacity: 0.8;
@@ -93,10 +105,17 @@
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(6, 5vw);
         gap: 15px;
+        @media (max-width: $breakpoint480) {
+            display: flex;
+            flex-direction: column;
+        }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @media (max-width: $breakpoint480) {
+                height: 250px;
+            }
         }
         &__text {
             grid-column-start: 1;
@@ -110,10 +129,20 @@
             font-size: 50px;
             // padding: 0 100px;
             color: #fff;
+            @media (max-width: $breakpoint768) {
+                grid-column-start: 1;
+                grid-column-end: 13;
+                grid-row-start: 1;
+                font-size: 35px;
+                height: 100%;
+            }
             &--title {
                 font-family: 'GalanoGrotesque-Light', sans-serif;
                 font-size: 50px;
                 color: #fff;
+                @media (max-width: $breakpoint768) {
+                    font-size: 35px;
+                }
             }
         }
         &-img {
@@ -124,6 +153,12 @@
             grid-column-end: 7;
             grid-row-start: 2;
             grid-row-end: 7;
+            @media (max-width: $breakpoint480) {
+                grid-column-start: 1;
+                grid-row-start: 2;
+                // grid-column-end: 13;
+                // grid-row-end: 5;
+            }
             &__descr {
                 position: absolute;
                 display: block;
@@ -218,24 +253,54 @@
             grid-column-end: 10;
             grid-row-start: 1;
             grid-row-end: 5;
+            @media (max-width: $breakpoint768) {
+                grid-row-start: 2;
+            }
+            @media (max-width: $breakpoint480) {
+                // display: none;
+                // grid-column-start: 1;
+                // grid-column-end: 13;
+                grid-row-start: 3;
+                grid-row-end: 7;
+            }
         }
         &-img3 {
             grid-column-start: 7;
             grid-column-end: 10;
             grid-row-start: 5;
             grid-row-end: 7;
+            @media (max-width: $breakpoint480) {
+                // display: none;
+                grid-column-start: 10;
+                grid-column-end: 13;
+                grid-row-start: 3;
+                grid-row-end: 6;
+            }
         }
         &-img4 {
             grid-column-start: 10;
             grid-column-end: 13;
             grid-row-start: 1;
             grid-row-end: 4;
+            @media (max-width: $breakpoint768) {
+                grid-row-start: 4;
+            }
+            @media (max-width: $breakpoint480) {
+                display: none;
+            }
         }
         &-img5 {
             grid-column-start: 10;
             grid-column-end: 13;
             grid-row-start: 4;
             grid-row-end: 6;
+            @media (max-width: $breakpoint768) {
+                grid-row-start: 2;
+                grid-row-end: 6;
+            }
+            @media (max-width: $breakpoint480) {
+                display: none;
+            }
         }
         &-more {
             margin-top: 20px;
@@ -251,5 +316,17 @@
             font-size: 18px;
             border: 1px solid #000;
             box-shadow: rgba(0, 0, 0, .25) 0 10px 25px;
+            @media (max-width: $breakpoint768) {
+                width: 100%;
+                font-size: 12px;
+                margin-top: 0;
+            }
+            @media (max-width: $breakpoint480) {
+                display: block;
+                margin: 0 auto;
+                width: 50%;
+                text-align: center;
+                padding: 10px;
+            }
         }
     }

@@ -35,6 +35,9 @@
             .swiper-slide {
                 max-width: 320px;
                 height: 360px;
+                @media (max-width: $breakpoint480) {
+                    max-width: 100%;
+                }
                 img {
                     display: block;
                     width: 100%;
@@ -46,18 +49,27 @@
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__img2 {
                     background-image: url(../../img/logistics-solution2.jpg);
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__img3 {
                     background-image: url(../../img/logistics-solution3.jpg);
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__text {
                     opacity: 0.8;
@@ -112,10 +124,11 @@
     grid-template-rows: repeat(5, 7vw);
     gap: 15px;
     @media (max-width: $breakpoint768) {
-        grid-template-columns: repeat(12, 1fr); /* You may adjust this based on your design */
-        grid-template-rows: repeat(8, auto); /* Adjusted for smaller screens */
+        grid-template-columns: repeat(12, 1fr);
+        /* You may adjust this based on your design */
+        grid-template-rows: repeat(8, auto);
+        /* Adjusted for smaller screens */
     }
-    
     img {
         width: 100%;
         height: 100%;
@@ -135,9 +148,9 @@
         // padding: 0 100px;
         color: #fff;
         @media (max-width: $breakpoint768) {
-        grid-column-start: 1;
-        grid-column-end: 13;
-        font-size: 35px;
+            grid-column-start: 1;
+            grid-column-end: 13;
+            font-size: 35px;
         }
         &--title {
             font-family: 'GalanoGrotesque-Light', sans-serif;
@@ -145,9 +158,8 @@
             color: #fff;
             @media (max-width: $breakpoint768) {
                 font-size: 35px;
-                }
+            }
         }
-        
     }
     &-img {
         position: relative;
@@ -159,9 +171,10 @@
         grid-row-end: 4;
         @media (max-width: $breakpoint480) {
             grid-column-start: 1;
-        grid-column-end: 13;
-        grid-row-start: 2;
-        grid-row-end: 4;
+            grid-column-end: 13;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            height: 250px;
         }
         &__descr {
             position: absolute;
@@ -260,9 +273,10 @@
         grid-row-end: 6;
         @media (max-width: $breakpoint480) {
             grid-column-start: 1;
-        grid-column-end: 13;
-        grid-row-start: 4;
-        grid-row-end: 9;
+            grid-column-end: 13;
+            grid-row-start: 4;
+            grid-row-end: 9;
+            height: 250px;
         }
     }
     &-img3 {
@@ -280,8 +294,8 @@
         grid-row-start: 1;
         grid-row-end: 6;
         @media (max-width: $breakpoint768) {
-        grid-row-start: 2;
-        grid-row-end: 6;
+            grid-row-start: 2;
+            grid-row-end: 6;
         }
         @media (max-width: $breakpoint480) {
             display: none;

@@ -29,12 +29,18 @@
                 padding: 15px 20px;
                 border: 1px solid #000;
                 box-shadow: rgba(0, 0, 0, .25) 0 10px 25px;
+                @media (max-width: $breakpoint480) {
+                    margin-right: 0;
+                }
             }
         }
         .swiper-wrapper {
             .swiper-slide {
                 max-width: 320px;
                 height: 360px;
+                @media (max-width: $breakpoint480) {
+                    max-width: 100%;
+                }
                 img {
                     display: block;
                     width: 100%;
@@ -46,18 +52,27 @@
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__img2 {
                     background-image: url(../../img/horeca-solution2.jpg);
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__img3 {
                     background-image: url(../../img/horeca-solution3.jpg);
                     background-size: 320px 320px;
                     background-repeat: no-repeat;
                     object-fit: cover;
+                    @media (max-width: $breakpoint480) {
+                        background-size: 100% 320px;
+                    }
                 }
                 &__text {
                     opacity: 0.8;
@@ -111,6 +126,13 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5, 7vw);
     gap: 15px;
+    @media (max-width: $breakpoint480) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
     img {
         width: 100%;
         height: 100%;
@@ -129,11 +151,17 @@
         font-size: 50px;
         text-transform: uppercase;
         // padding: 0 100px;
+        @media (max-width: $breakpoint768) {
+            font-size: 30px;
+        }
         color: #fff;
         &--title {
             font-family: 'GalanoGrotesque-Light', sans-serif;
             font-size: 50px;
             color: #fff;
+            @media (max-width: $breakpoint768) {
+                font-size: 30px;
+            }
         }
     }
     &-img {
@@ -144,24 +172,36 @@
         grid-column-end: 7;
         grid-row-start: 1;
         grid-row-end: 3;
+        @media (max-width: $breakpoint480) {
+            height: 250px;
+        }
     }
     &-img2 {
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 4;
         grid-row-end: 6;
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
     }
     &-img3 {
         grid-column-start: 5;
         grid-column-end: 7;
         grid-row-start: 4;
         grid-row-end: 6;
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
     }
     &-img4 {
         grid-column-start: 7;
         grid-column-end: 13;
         grid-row-start: 1;
         grid-row-end: 6;
+        @media (max-width: $breakpoint480) {
+            height: 250px;
+        }
         &__descr {
             position: absolute;
             display: block;

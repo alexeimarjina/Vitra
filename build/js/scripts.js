@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function() {
     var firstSection = document.querySelector('.main-section');
     var firstSectionHeight = firstSection.offsetHeight;
     var burgerSpans = document.querySelectorAll('.bar');
@@ -37,8 +37,7 @@ window.addEventListener('scroll', function(){
             span.style.backgroundColor = '#000';
         });
         burgerText.style.color = '#000';
-    }
-    else {
+    } else {
         burgerSpans.forEach(function(span) {
             span.style.backgroundColor = '';
         });
@@ -203,7 +202,9 @@ function startCountersWhenVisible() {
 }
 startCountersWhenVisible();
 
-const swiper = new Swiper('.swiper', {
+//Swipers
+
+const retailSwiper = new Swiper('.retailSwiper', {
 
     // If we need pagination
     slidesPerView: "auto",
@@ -219,22 +220,15 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-
-    //   // Responsive breakpoints
-    //   breakpoints: {
-    //   // when window width is >= 320px
-    //   320: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20
-    //   },
-    //   // when window width is >= 480px
-    //   480: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 30
-    //   },
-    // }
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+    }
 });
-const swiper1 = new Swiper('.mySwiper1', {
+
+const logisticsSwiper = new Swiper('.logisticsSwiper', {
 
     // If we need pagination
     slidesPerView: "auto",
@@ -250,7 +244,35 @@ const swiper1 = new Swiper('.mySwiper1', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+    breakpoints: {
+        480: {
+            slidesPerView: 1
+                // spaceBetween: 20
+        }
+    }
+});
+const horecaSLider = new Swiper('.horecaSlider', {
 
+    // If we need pagination
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    pagination: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 1
+                // spaceBetween: 20
+        }
+    }
     //   // Responsive breakpoints
     //   breakpoints: {
     //   // when window width is >= 320px
