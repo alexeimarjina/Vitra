@@ -1,6 +1,9 @@
     .retail-section {
         margin-top: 100px;
         margin-bottom: 100px;
+        @media (max-width: $breakpoint480) {
+            margin-top: 50px;
+        }
         .swiper {
             margin-top: 100px;
             width: 100%;
@@ -103,7 +106,7 @@
     .retail {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, 5vw);
+        grid-template-rows: repeat(5, 7vw);
         gap: 15px;
         @media (max-width: $breakpoint480) {
             display: flex;
@@ -128,13 +131,18 @@
             font-family: 'GalanoGrotesque-Bold', sans-serif;
             font-size: 50px;
             // padding: 0 100px;
+            // height: 115px;
             color: #fff;
+            @media (max-width: $breakpoint1025) {
+                height: 70px;
+            }
             @media (max-width: $breakpoint768) {
                 grid-column-start: 1;
                 grid-column-end: 13;
                 grid-row-start: 1;
                 font-size: 35px;
                 height: 100%;
+
             }
             &--title {
                 font-family: 'GalanoGrotesque-Light', sans-serif;
@@ -152,7 +160,7 @@
             grid-column-start: 1;
             grid-column-end: 7;
             grid-row-start: 2;
-            grid-row-end: 7;
+            grid-row-end: 6;
             @media (max-width: $breakpoint480) {
                 grid-column-start: 1;
                 grid-row-start: 2;
@@ -252,7 +260,7 @@
             grid-column-start: 7;
             grid-column-end: 10;
             grid-row-start: 1;
-            grid-row-end: 5;
+            grid-row-end: 4;
             @media (max-width: $breakpoint768) {
                 grid-row-start: 2;
             }
@@ -261,14 +269,14 @@
                 // grid-column-start: 1;
                 // grid-column-end: 13;
                 grid-row-start: 3;
-                grid-row-end: 7;
+                grid-row-end: 6;
             }
         }
         &-img3 {
             grid-column-start: 7;
             grid-column-end: 10;
-            grid-row-start: 5;
-            grid-row-end: 7;
+            grid-row-start: 4;
+            grid-row-end: 6;
             @media (max-width: $breakpoint480) {
                 // display: none;
                 grid-column-start: 10;
@@ -281,9 +289,10 @@
             grid-column-start: 10;
             grid-column-end: 13;
             grid-row-start: 1;
-            grid-row-end: 4;
+            grid-row-end: 3;
             @media (max-width: $breakpoint768) {
                 grid-row-start: 4;
+                grid-row-end: 6;
             }
             @media (max-width: $breakpoint480) {
                 display: none;
@@ -292,11 +301,11 @@
         &-img5 {
             grid-column-start: 10;
             grid-column-end: 13;
-            grid-row-start: 4;
-            grid-row-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 5;
             @media (max-width: $breakpoint768) {
                 grid-row-start: 2;
-                grid-row-end: 6;
+                grid-row-end: 4;
             }
             @media (max-width: $breakpoint480) {
                 display: none;
@@ -317,6 +326,8 @@
             border: 1px solid #000;
             box-shadow: rgba(0, 0, 0, .25) 0 10px 25px;
             @media (max-width: $breakpoint768) {
+                grid-row-start: 6;
+                padding: 10px 0;
                 width: 100%;
                 font-size: 12px;
                 margin-top: 0;

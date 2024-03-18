@@ -121,7 +121,7 @@
 .logistics {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 7vw);
+    grid-template-rows: repeat(5, auto);
     gap: 15px;
     @media (max-width: $breakpoint768) {
         grid-template-columns: repeat(12, 1fr);
@@ -144,9 +144,12 @@
         background-color: #63c6f1;
         font-family: 'GalanoGrotesque-Bold', sans-serif;
         font-size: 50px;
-        height: 50px;
+        height: 115px;
         // padding: 0 100px;
         color: #fff;
+        @media (max-width: $breakpoint1025) {
+            height: 70px;
+        }
         @media (max-width: $breakpoint768) {
             grid-column-start: 1;
             grid-column-end: 13;

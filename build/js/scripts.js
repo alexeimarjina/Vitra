@@ -141,23 +141,6 @@ document
         mainSwiper.slideTo(3, 0);
     });
 
-
-
-// splide.on('mounted move', function() {
-//     var end = splide.Components.Controller.getEnd() + 1;
-//     var rate = Math.min((splide.index + 1) / end, 1);
-
-//     // Check if bar is not null before accessing its style property.
-//     if (bar) {
-//         bar.style.width = String(100 * rate) + '%';
-//     } else {
-//         console.log("Error: 'bar' is null");
-//     }
-// });
-
-// splide.mount();
-
-
 // Num counter
 function numCounter(selector, number, time, step) {
     const counter = document.querySelector(selector);
@@ -307,17 +290,17 @@ const swiper2 = new Swiper('.mySwiper2', {
         el: '.swiper-scrollbar',
     },
 
-    //   // Responsive breakpoints
-    //   breakpoints: {
-    //   // when window width is >= 320px
-    //   320: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20
-    //   },
-    //   // when window width is >= 480px
-    //   480: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 30
-    //   },
-    // }
+      // Responsive breakpoints
+      breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+    }
 });

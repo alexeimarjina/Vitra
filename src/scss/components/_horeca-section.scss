@@ -9,6 +9,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media (max-width: $breakpoint480) {
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                
+            }
             margin-bottom: 30px;
             &-title {
                 font-family: 'GalanoGrotesque-Light', sans-serif;
@@ -152,6 +159,7 @@
         text-transform: uppercase;
         // padding: 0 100px;
         @media (max-width: $breakpoint768) {
+            height: 70px;
             font-size: 30px;
         }
         color: #fff;
