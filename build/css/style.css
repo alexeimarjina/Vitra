@@ -73,7 +73,7 @@ h6 {
   font-size: inherit;
 }
 
-.container {
+.custom-container {
   max-width: 1250px;
   width: 100%;
   margin: 0 auto;
@@ -143,8 +143,22 @@ body.dark {
           box-shadow: none;
 }
 
+.category-title {
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  text-align: center;
+  font-size: 90px;
+  color: #fff;
+}
+
+.category-title__span {
+  font-family: "GalanoGrotesque-Bold", sans-serif;
+}
+
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 5;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.901)));
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.901) 80%);
@@ -670,9 +684,6 @@ body.dark {
 
 .main-section {
   position: relative;
-  -webkit-transform: translateY(-80px);
-      -ms-transform: translateY(-80px);
-          transform: translateY(-80px);
 }
 
 .main-section .swiper .swipper-scrollbar__body {
@@ -832,6 +843,10 @@ body.dark {
   height: 50px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.category-section {
+  margin-top: 100px;
 }
 
 .category-body {
@@ -2623,6 +2638,153 @@ body.dark {
   padding: 10px 65px;
 }
 
+.maincategory-section__title {
+  padding-top: 320px;
+  padding-bottom: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: ">";
+  position: absolute;
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  color: #000;
+  right: -13px;
+  font-size: 14px;
+  top: 3px;
+}
+
+.breadcrumbs__link {
+  font-family: "GalanoGrotesque-Medium", sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.breadcrumbs__link.active {
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.breadcrumbs__link.active:hover {
+  border-bottom-color: #000;
+}
+
+.breadcrumbs__link:not([href]) {
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  color: inherit;
+}
+
+.swiper .category-slider__img {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.swiper .category-slider__img img {
+  width: 100%;
+}
+
+.swiper-button-next {
+  color: #fff;
+}
+
+.swiper-button-prev {
+  color: #fff;
+}
+
+.category-info {
+  margin-top: 50px;
+}
+
+.category-info__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-info__card {
+  width: 290px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.category-info__card:hover {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 10px 40px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 10px 40px;
+}
+
+.category-info__card-text {
+  margin: 15px 0 20px 15px;
+}
+
+.category-info__title {
+  margin-bottom: 15px;
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  font-size: 18px;
+}
+
+.category-info__title-span {
+  font-family: "GalanoGrotesque-Bold", sans-serif;
+}
+
+.category-info__descr {
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  color: #454545;
+  max-width: 230px;
+}
+
+.more-ideas {
+  margin-top: 60px;
+}
+
+.more-ideas__title {
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  font-size: 36px;
+}
+
+.more-ideas__title-span {
+  font-family: "GalanoGrotesque-Bold", sans-serif;
+}
+
+.more-ideas__tabs-body {
+  margin-top: 90px;
+}
+
 .footer {
   background: #1c1c1c;
 }
@@ -2778,7 +2940,7 @@ body.dark {
 }
 
 @media (max-width: 1024.98px) {
-  .container {
+  .custom-container {
     max-width: 1024px;
   }
 
@@ -2840,13 +3002,13 @@ body.dark {
 }
 
 @media (max-width: 991.98px) {
-  .container {
+  .custom-container {
     max-width: 970px;
   }
 }
 
 @media (max-width: 768.98px) {
-  .container {
+  .custom-container {
     max-width: 740px;
   }
 
@@ -3177,7 +3339,7 @@ body.dark {
 }
 
 @media (max-width: 480.98px) {
-  .container {
+  .custom-container {
     max-width: none;
   }
 

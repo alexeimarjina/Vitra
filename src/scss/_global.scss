@@ -1,5 +1,26 @@
 // Container
-.container {
+// .container {
+//     max-width: ($containerWidth + $containerPadding) + px;
+//     width: 100%;
+//     margin: 0 auto;
+//     padding: 0 $containerSidePadding + px;
+//     // @media (max-width: $breakpoint1450) {
+//     //     max-width: 1080px;
+//     // }
+//     @media (max-width: $breakpoint1025) {
+//         max-width: 1024px;
+//     }
+//     @media (max-width: $breakpoint992) {
+//         max-width: 970px;
+//     }
+//     @media (max-width: $breakpoint768) {
+//         max-width: 740px;
+//     }
+//     @media (max-width: $breakpoint480) {
+//         max-width: none;
+//     }
+// }
+.custom-container {
     max-width: ($containerWidth + $containerPadding) + px;
     width: 100%;
     margin: 0 auto;
@@ -61,5 +82,15 @@ body {
     &:hover {
         background-color: #e8e8e8;
         box-shadow: none;
+    }
+}
+
+.category-title {
+    font-family: 'GalanoGrotesque-Light', sans-serif;
+    text-align: center;
+    font-size: 90px;
+    color: #fff;
+    &__span {
+        font-family: 'GalanoGrotesque-Bold', sans-serif;
     }
 }

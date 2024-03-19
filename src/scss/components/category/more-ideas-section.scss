@@ -1,0 +1,13 @@
+.more-ideas {
+    margin-top: 60px;
+    &__title {
+        font-family: 'GalanoGrotesque-Light', sans-serif;
+        font-size: 36px;
+        &-span {
+            font-family: 'GalanoGrotesque-Bold', sans-serif;
+        }
+    }
+    &__tabs-body {
+        margin-top: 90px;
+    }
+}

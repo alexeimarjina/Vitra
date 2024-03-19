@@ -1,3 +1,7 @@
+.category-section {
+    margin-top: 100px;
+}
+
 .category-body {
     display: flex;
     justify-content: space-between;
@@ -78,10 +82,9 @@
         margin-right: 15px;
         margin-bottom: 10px;
     }
-    
 }
 
-.category-counter__cards-body{
+.category-counter__cards-body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -108,14 +111,13 @@
             padding-bottom: 25px;
         }
         &::after {
-            
             content: '';
             position: absolute;
             width: 100%;
             height: 1px;
             background: #e0e0e0;
             bottom: -15px;
-            &:last{
+            &:last {
                 display: none;
             }
         }
