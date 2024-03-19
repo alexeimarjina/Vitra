@@ -5,15 +5,15 @@
 @import './global';
 // Sections or Pages SCSS-files imports
 @import './header';
-@import './components/main-section';
-@import './components/category-section';
-@import './components/retail-section';
-@import './components/logistics-section';
-@import './components/offer-section';
-@import './components/horeca-section';
-@import './components/life-section';
-@import './components/sponsor-section';
-@import './components/news-section';
+@import './components/index/main-section';
+@import './components/index/category-section';
+@import './components/index/retail-section';
+@import './components/index/logistics-section';
+@import './components/index/offer-section';
+@import './components/index/horeca-section';
+@import './components/index/life-section';
+@import './components/index/sponsor-section';
+@import './components/index/news-section';
 @import './footer';
 @import './home';
 // @import './footer';
