@@ -2782,10 +2782,88 @@ body.dark {
 }
 
 .more-ideas__tabs-body {
-  margin-top: 90px;
+  margin-top: 50px;
+}
+
+.more-ideas__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tabs-tab__button {
+  background: #f3f3f3;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.tabs-tab__button:hover {
+  color: #fff;
+  background: #000;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.swiper {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+}
+
+.swiper-button-next::after {
+  color: #000;
+  font-size: 30px;
+}
+
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+}
+
+.swiper-button-prev::after {
+  color: #000;
+  font-size: 30px;
+}
+
+.swiper-scrollbar__position {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  top: 0;
+}
+
+.swiper-scrollbar__position .swiper-scrollbar-horizontal {
+  left: 0;
+  width: 100%;
 }
 
 .footer {
+  margin-top: 100px;
   background: #1c1c1c;
 }
 
