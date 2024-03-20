@@ -20,6 +20,9 @@
             position: relative;
             z-index: 2;
             color: #fff;
+            @media (max-width: $breakpoint480) {
+                font-size: 42px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -32,6 +35,10 @@
                 border-bottom: 1px solid #ee2a2653;
                 // background-color: rgba(119, 21, 19, 0.13);
                 background-color: rgba(238, 42, 38, 0.03);
+                @media (max-width: $breakpoint480) {
+                    top: -30px;
+                    height: 100px;
+                }
             }
         }
         @media (max-width: $breakpoint480) {

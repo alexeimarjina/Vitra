@@ -16,6 +16,10 @@
             width: 100%;
             flex-wrap: wrap;
             gap: 20px;
+            @media (max-width: $breakpoint1025) {
+                justify-content: center;
+                align-items: center;
+            }
             @media (max-width: $breakpoint768) {
                 justify-content: space-evenly;
                 gap: 15px;

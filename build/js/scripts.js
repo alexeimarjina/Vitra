@@ -13,12 +13,14 @@ window.addEventListener('scroll', function() {
     if (window.innerWidth <= 1280 && scrollPosition >= 35) {
         document.querySelector('.header__container').classList.add('scrolled');
         document.querySelector('.header__container').style.top = '0';
+        document.querySelector('.header__container').transition = 'top 0.5s ease';
     } else {
         document.querySelector('.header__container').classList.remove('scrolled');
         document.querySelector('.header__container').style.top = '';
         if (scrollPosition <= 35) {
             document.querySelector('.nav--left').style.top = '';
         }
+        document.querySelector('.header__container').transition = 'top 0.5s ease';
     }
 });
 

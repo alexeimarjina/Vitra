@@ -7,14 +7,17 @@
                 position: absolute;
                 right: 130px;
                 bottom: 40px;
-                .swiper-button-next {
+                .main-swiper__next {
+                    border-radius: 0;
+                    background: transparent;
+                    box-shadow: none;
+                    right: -100px;
                     &::after {
+                        color: #fff;
                         font-size: 30px;
                     }
-                    color: #fff;
-                    right: -100px;
                 }
-                .swiper-button-prev {
+                .main-swiper__prev {
                     @media (max-width: $breakpoint480) {
                         left: -10px;
                     }
@@ -22,10 +25,14 @@
                         left: -5px;
                     }
                     &::after {
+                    color: #fff;
+
                         font-size: 30px;
                     }
+                    border-radius: 0;
+                    background: transparent;
+                    box-shadow: none;
                     left: -30px;
-                    color: #fff;
                 }
             }
         }

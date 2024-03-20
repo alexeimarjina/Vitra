@@ -143,7 +143,7 @@ const logisticsSwiper = new Swiper('.logisticsSwiper', {
     }
 });
 
-const horecaSLider = new Swiper('.horecaSlider', {
+const horecaSlider = new Swiper('.horecaSlider', {
 
     // If we need pagination
     slidesPerView: "auto",
@@ -161,28 +161,20 @@ const horecaSLider = new Swiper('.horecaSlider', {
     },
     breakpoints: {
         480: {
-            slidesPerView: 1
-                // spaceBetween: 20
-        }
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: "auto",
+            spaceBetween: 20
+        },
     }
-    //   // Responsive breakpoints
-    //   breakpoints: {
-    //   // when window width is >= 320px
-    //   320: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20
-    //   },
-    //   // when window width is >= 480px
-    //   480: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 30
-    //   },
-    // }
 });
-const swiper2 = new Swiper('.mySwiper2', {
+
+const lifeSlider = new Swiper('.lifeSwiper', {
 
     // If we need pagination
-    slidesPerView: 4,
+    slidesPerView: "auto",
     spaceBetween: 15,
     pagination: false,
     // Navigation arrows
@@ -195,18 +187,14 @@ const swiper2 = new Swiper('.mySwiper2', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-
-    // Responsive breakpoints
     breakpoints: {
-        // when window width is >= 320px
-        320: {
+        480: {
             slidesPerView: 1,
             spaceBetween: 20
         },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 30
+        768: {
+            slidesPerView: "auto",
+            spaceBetween: 20
         },
     }
 });

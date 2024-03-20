@@ -136,6 +136,13 @@
 }
 
 .life {
+    &-more{
+        @media (max-width: 1017px) {
+            margin-top: 30px;
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+    }
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5, 7vw);
@@ -290,10 +297,16 @@
         }
         &__text {
             margin-top: 30px;
+            @media (max-width: 1017px) {
+                margin-top: 10px;
+            }
             &-title {
                 font-family: 'GalanoGrotesque-Light', sans-serif;
                 font-size: 36px;
                 margin-bottom: 30px;
+                @media (max-width: 1227px) {
+                    margin-bottom: 0;
+                }
                 @media (max-width: $breakpoint1025) {
                     margin-bottom: 0;
                 }
@@ -315,6 +328,7 @@
         grid-column-end: 10;
         grid-row-start: 5;
         align-items: center;
+        
         @media (max-width: $breakpoint768) {
             width: 290px;
             display: block;
