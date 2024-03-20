@@ -1,8 +1,8 @@
-.category-section {
+.industry-section {
     margin-top: 100px;
 }
 
-.category-body {
+.industry-body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -30,40 +30,40 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        .category-text__container {
+        .industry-text__container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
-        .category-text__container-retail {
+        .industry-text__container-retail {
             border-bottom: 3px solid #ee2a26;
             transition: .3s ease-in-out;
         }
-        &:hover .category-text__container-retail {
+        &:hover .industry-text__container-retail {
             transition: .3s ease-in-out;
             background: linear-gradient(transparent, #ff5c59 91%);
         }
-        .category-text__container-logistics {
+        .industry-text__container-logistics {
             border-bottom: 3px solid #30a1d2;
         }
-        &:hover .category-text__container-logistics {
+        &:hover .industry-text__container-logistics {
             transition: .3s ease-in-out;
             background: linear-gradient(transparent, #30a2d2be 91%);
         }
-        .category-text__container-horeca {
+        .industry-text__container-horeca {
             border-bottom: 3px solid #1f2683;
             transition: .3s ease-in-out;
         }
-        &:hover .category-text__container-horeca {
+        &:hover .industry-text__container-horeca {
             transition: .3s ease-in-out;
             background: linear-gradient(transparent, #1f2683d0 91%);
         }
-        .category-text__container-life {
+        .industry-text__container-life {
             border-bottom: 3px solid #0e8232;
             transition: .3s ease-in-out;
         }
-        &:hover .category-text__container-life {
+        &:hover .industry-text__container-life {
             transition: .3s ease-in-out;
             background: linear-gradient(transparent, #0e8233b3 91%);
         }
@@ -84,7 +84,7 @@
     }
 }
 
-.category-counter__cards-body {
+.industry-counter__cards-body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -94,7 +94,7 @@
         align-items: center;
         align-content: center;
     }
-    .category-counter__cards {
+    .industry-counter__cards {
         position: relative;
         display: flex;
         align-items: center;
@@ -169,7 +169,7 @@
     }
 }
 
-.category-counter {
+.industry-counter {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
