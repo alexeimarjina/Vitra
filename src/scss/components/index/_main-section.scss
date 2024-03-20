@@ -16,11 +16,15 @@
                 }
                 .swiper-button-prev {
                     @media (max-width: $breakpoint480) {
-                        left: 30px;
+                        left: -10px;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        left: -5px;
                     }
                     &::after {
                         font-size: 30px;
                     }
+                    left: -30px;
                     color: #fff;
                 }
             }
@@ -78,6 +82,9 @@
             background: #fff;
             &-drag {
                 background: #000;
+            }
+            @media (max-width: $breakpoint768) {
+                left: 40%;
             }
         }
         &-slide {

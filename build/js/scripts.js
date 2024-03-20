@@ -7,7 +7,7 @@ let dropLang = document.querySelector('.dropdown');
 let dropContent = dropLang.querySelector('.dropdown-content');
 
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY || window.pageYOffset;
 
     if (window.innerWidth <= 1280 && scrollPosition >= 35) {
@@ -28,14 +28,13 @@ window.addEventListener('scroll', function() {
 
     if (scrollPosition >= 35) {
         navLeftActive.style.top = '0';
-    }
-    else{
+    } else {
         navLeftActive.style.top = '';
     }
 })
 
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function() {
     var sections = document.getElementsByTagName('section');
     var firstSection = sections.length > 0 ? sections[0] : null;
 
@@ -45,17 +44,17 @@ window.addEventListener('scroll', function () {
     var burgerSpans = document.querySelectorAll('.bar');
     var burgerText = document.querySelector('.menu-btn__body--text');
 
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 1280) {
         return;
     }
 
     if (window.scrollY > firstSectionHeight) {
-        burgerSpans.forEach(function (span) {
+        burgerSpans.forEach(function(span) {
             span.style.backgroundColor = '#000';
         });
         burgerText.style.color = '#000';
     } else {
-        burgerSpans.forEach(function (span) {
+        burgerSpans.forEach(function(span) {
             span.style.backgroundColor = '';
         });
         burgerText.style.color = '';
@@ -63,26 +62,26 @@ window.addEventListener('scroll', function () {
 });
 
 
-dropLang.addEventListener('click', function () {
+dropLang.addEventListener('click', function() {
     dropContent.classList.toggle('active');
 });
 
-menuItem.forEach(function (menuItem) {
-    menuItem.addEventListener('click', function () {
+menuItem.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function() {
         menuBtn.classList.toggle('active');
         menu.classList.toggle('active');
     })
 })
 
 
-menuBtn.addEventListener('click', function () {
+menuBtn.addEventListener('click', function() {
     menuBtn.classList.toggle('active');
     menuBtnOpen.classList.toggle('active');
     menuText.classList.toggle('active');
     menu.classList.toggle('active');
 })
 
-menuBtnOpen.addEventListener('click', function () {
+menuBtnOpen.addEventListener('click', function() {
     menuBtnOpen.classList.remove('active');
     menu.classList.remove('active');
     menuText.classList.remove('active');

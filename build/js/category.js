@@ -24,16 +24,24 @@ const moreIdeas = new Swiper('.moreIdeas', {
     },
 
     // Responsive breakpoints
-    // breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 30
-    //     },
-    // }
+    breakpoints: {
+        // when window width is >= 320px
+        // 320: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 20
+        // },
+        // when window width is >= 480px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+        481: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 15
+        },
+    }
 });

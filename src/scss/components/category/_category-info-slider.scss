@@ -1,7 +1,12 @@
 .swiper {
+    margin-top: 0;
     .category-slider__img {
         padding-top: 0;
         padding-bottom: 0;
+        @media (max-width: $breakpoint480) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
         img {
             width: 100%;
         }
@@ -18,10 +23,13 @@
     margin-top: 50px;
     &__cards {
         display: flex;
-        justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
         gap: 20px;
+        @media (max-width: $breakpoint768) {
+            justify-content: space-evenly;
+            gap: 15px;
+        }
     }
     &__card {
         width: 290px;

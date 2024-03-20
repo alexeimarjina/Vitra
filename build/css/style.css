@@ -706,6 +706,7 @@ body.dark {
 }
 
 .main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-prev {
+  left: -30px;
   color: #fff;
 }
 
@@ -2698,6 +2699,10 @@ body.dark {
   color: inherit;
 }
 
+.swiper {
+  margin-top: 0;
+}
+
 .swiper .category-slider__img {
   padding-top: 0;
   padding-bottom: 0;
@@ -2723,9 +2728,6 @@ body.dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2783,15 +2785,14 @@ body.dark {
 
 .more-ideas__tabs-body {
   margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .more-ideas__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -2813,7 +2814,6 @@ body.dark {
 
 .swiper {
   width: 100%;
-  margin-top: 15px;
 }
 
 .swiper-slide img {
@@ -3087,7 +3087,7 @@ body.dark {
 
 @media (max-width: 768.98px) {
   .custom-container {
-    max-width: 740px;
+    max-width: 100%;
   }
 
   .header__container .nav--left {
@@ -3124,6 +3124,10 @@ body.dark {
     left: 5%;
   }
 
+  .main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-prev {
+    left: -5px;
+  }
+
   .main-section .swiper-buttons__bottom .append-buttons__body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3132,6 +3136,10 @@ body.dark {
 
   .main-section .swiper-buttons__bottom .append-buttons__text {
     width: 50%;
+  }
+
+  .main-section .swiper-scrollbar {
+    left: 40%;
   }
 
   .retail__text {
@@ -3301,6 +3309,13 @@ body.dark {
     height: 28px;
   }
 
+  .category-info__cards {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    gap: 15px;
+  }
+
   .footer-body {
     width: calc(100% - 20px);
     display: -webkit-box;
@@ -3454,7 +3469,7 @@ body.dark {
   }
 
   .main-section .swiper .swipper-scrollbar__body-arrows .swiper-button-prev {
-    left: 30px;
+    left: -10px;
   }
 
   .main-section .swiper-buttons__bottom .append-buttons__body {
@@ -3713,6 +3728,16 @@ body.dark {
 
   .news-section__card {
     width: 100%;
+  }
+
+  .maincategory-section__title {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+  .swiper .category-slider__img {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 

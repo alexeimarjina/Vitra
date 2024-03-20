@@ -107,6 +107,10 @@ const retailSwiper = new Swiper('.retailSwiper', {
             slidesPerView: 1,
             spaceBetween: 20
         },
+        768: {
+            slidesPerView: "auto",
+            spaceBetween: 20
+        },
     }
 });
 
