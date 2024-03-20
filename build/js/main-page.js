@@ -40,7 +40,7 @@ document
 // Num counter
 function numCounter(selector, number, time, step) {
     const counter = document.querySelector(selector);
-
+    if (counter.innerHTML) return;
     let res = 0;
     const allTime = Math.round(time / (number / step));
 
@@ -54,6 +54,7 @@ function numCounter(selector, number, time, step) {
         counter.innerHTML = res;
     }, allTime);
 }
+
 
 function startCountersWhenVisible() {
     const countersData = [
@@ -77,7 +78,7 @@ function startCountersWhenVisible() {
 
     countersData.forEach(counterData => {
         const counterElement = document.querySelector(counterData.selector);
-        if (counterElement) {
+        if (counterElement && !counterElement.innerHTML) {
             observer.observe(counterElement);
         }
     });
@@ -132,11 +133,16 @@ const logisticsSwiper = new Swiper('.logisticsSwiper', {
     },
     breakpoints: {
         480: {
-            slidesPerView: 1
-                // spaceBetween: 20
-        }
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: "auto",
+            spaceBetween: 20
+        },
     }
 });
+
 const horecaSLider = new Swiper('.horecaSlider', {
 
     // If we need pagination
