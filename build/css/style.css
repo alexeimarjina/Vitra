@@ -143,14 +143,51 @@ body.dark {
           box-shadow: none;
 }
 
-.industry-title {
+.all-titles {
+  position: relative;
+  padding-top: 320px;
+  padding-bottom: 300px;
+  mix-blend-mode: hard-light;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.all-titles::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.all-titles__title {
+  position: relative;
+  text-transform: uppercase;
+  z-index: 2;
+  color: #fff;
   font-family: "GalanoGrotesque-Light", sans-serif;
   text-align: center;
   font-size: 90px;
-  color: #fff;
 }
 
-.industry-title__span {
+.all-titles__title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  border-top: 1px solid #ee292653;
+  border-bottom: 1px solid #ee2a2653;
+  background-color: rgba(238, 42, 38, 0.03);
+}
+
+.all-titles__span {
   font-family: "GalanoGrotesque-Bold", sans-serif;
 }
 
@@ -2990,9 +3027,19 @@ body.dark {
   margin-top: 20px;
 }
 
-.footer-contacts__social img {
-  width: 36px;
-  height: 36px;
+.footer-contacts__social .social-svg__link img {
+  width: 26px;
+  height: 26px;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.footer-contacts__social .social-svg__link:hover img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .footer-second {
@@ -3511,6 +3558,20 @@ body.dark {
 @media (max-width: 480.98px) {
   .custom-container {
     max-width: none;
+  }
+
+  .all-titles__title {
+    font-size: 42px;
+  }
+
+  .all-titles__title::after {
+    top: -30px;
+    height: 100px;
+  }
+
+  .all-titles {
+    padding-top: 140px;
+    padding-bottom: 100px;
   }
 
   .header__container .menu-btn__body .menu-btn__body--text .menu-text {
