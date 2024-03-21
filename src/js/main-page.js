@@ -103,16 +103,16 @@ const retailSwiper = new Swiper('.retailSwiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: "auto",
-            spaceBetween: 20
-        },
-    }
+    // breakpoints: {
+    //     480: {
+    //         slidesPerView: "auto",
+    //         spaceBetween: 20
+    //     },
+    //     768: {
+    //         slidesPerView: "auto",
+    //         spaceBetween: 20
+    //     },
+    // }
 });
 
 const logisticsSwiper = new Swiper('.logisticsSwiper', {
@@ -131,16 +131,16 @@ const logisticsSwiper = new Swiper('.logisticsSwiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: "auto",
-            spaceBetween: 20
-        },
-    }
+    // breakpoints: {
+    //     480: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 20
+    //     },
+    //     768: {
+    //         slidesPerView: "auto",
+    //         spaceBetween: 20
+    //     },
+    // }
 });
 
 const horecaSlider = new Swiper('.horecaSlider', {
@@ -159,16 +159,17 @@ const horecaSlider = new Swiper('.horecaSlider', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: "auto",
-            spaceBetween: 20
-        },
-    }
+    // breakpoints: {
+    //     480: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 20
+    //     },
+    //     768: {
+    //         slidesPerView: "3",
+    //         spaceBetween: 20
+    //     },
+
+    // }
 });
 
 const lifeSlider = new Swiper('.lifeSwiper', {
@@ -187,14 +188,14 @@ const lifeSlider = new Swiper('.lifeSwiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-    breakpoints: {
-        480: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: "auto",
-            spaceBetween: 20
-        },
-    }
+    // breakpoints: {
+    //     480: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 20
+    //     },
+    //     768: {
+    //         slidesPerView: "auto",
+    //         spaceBetween: 20
+    //     },
+    // }
 });
