@@ -63,12 +63,10 @@
                     img {
                         width: 26px;
                         height: 26px;
-<<<<<<< HEAD
                         transition: filter .3s;
                         // filter: invert(100%);
                         
                         
-=======
                         filter: invert(100%)
                     }
                     svg {
@@ -77,7 +75,6 @@
                         .svg-path {
                             transition: fill .3s;
                         }
->>>>>>> 921bf82ab22c0504e75432647777be068ac59e15
                     }
                     &:hover {
                         .svg-path {
