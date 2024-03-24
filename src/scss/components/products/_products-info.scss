@@ -1,0 +1,38 @@
+.products-info{
+    margin-top: 50px;
+    &__body{
+        display: flex;
+    }
+    &__img{
+        .product-info__img1{
+            width: 100%;
+        }
+    }
+    &__text{
+        margin-left: 35px;
+    }
+    &__title{
+        font-family: 'GalanoGrotesque-Light', sans-serif;
+        font-size: 36px;
+        color: #000;
+        margin-bottom: 30px;
+        .product-info__span{
+            font-family: 'GalanoGrotesque-Bold', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+    &__descr{
+        color: #000;
+        font-size: 16px;
+    }
+    &__consult{
+        margin-top: 100px;
+        display: flex;
+        &-img{
+            margin-right: 30px;
+        }
+        &-text{
+            
+        }
+    }
+}
