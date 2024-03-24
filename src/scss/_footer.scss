@@ -63,11 +63,18 @@
                     img {
                         width: 26px;
                         height: 26px;
-                        transition: filter .3s;
+                        filter: invert(100%)
+                    }
+                    svg {
+                        width: 26px;
+                        height: 26px;
+                        .svg-path {
+                            transition: fill .3s;
+                        }
                     }
                     &:hover {
-                        img {
-                            filter: invert(100%);
+                        .svg-path {
+                            fill: #000;
                         }
                     }
                 }
