@@ -5,6 +5,7 @@
 @import './global';
 // Sections or Pages SCSS-files imports
 @import './header';
+@import './more-ideas-section';
 @import './components/index/main-section';
 @import './components/index/category-section';
 @import './components/index/retail-section';
@@ -17,10 +18,8 @@
 @import './components/industry/main-industry-section';
 @import './components/industry/main-industry-inner';
 @import './components/industry/industry-info-slider';
-@import './components/industry/more-ideas-section';
 @import './components/category/category-industry-section';
+@import './components/category/category-inner';
+@import './components/category/category-items-section';
 @import './footer';
 @import './home';
-// @import './footer';
-// Libs
-// @import './libs/swiper';
