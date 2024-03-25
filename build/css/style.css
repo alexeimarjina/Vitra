@@ -82,7 +82,7 @@ h6 {
 
 body {
   margin: 0;
-  font-family: "GalanoGrotesque", sans-serif;
+  font-family: "GalanoGrotesque-Regular", sans-serif;
   font-weight: 400;
 }
 
@@ -3006,6 +3006,8 @@ body.dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .products-info__img .product-info__img1 {
@@ -3013,7 +3015,7 @@ body.dark {
 }
 
 .products-info__text {
-  margin-left: 35px;
+  max-width: 542px;
 }
 
 .products-info__title {
@@ -3034,14 +3036,35 @@ body.dark {
 }
 
 .products-info__consult {
-  margin-top: 100px;
+  position: relative;
+  margin-top: 86px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .products-info__consult-img {
   margin-right: 30px;
+}
+
+.products-info__consult-text {
+  font-family: "GalanoGrotesque-Regular", sans-serif;
+  width: 100%;
+}
+
+.products-info__consult-text::before {
+  position: absolute;
+  content: "";
+  top: -43px;
+  width: 90%;
+  height: 1px;
+  background: #dedede;
+}
+
+.products-info__btn {
+  width: 250px;
+  float: right;
 }
 
 .footer {

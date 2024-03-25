@@ -1,38 +1,56 @@
-.products-info{
+.products-info {
     margin-top: 50px;
-    &__body{
+    &__body {
         display: flex;
+        justify-content: space-around;
     }
-    &__img{
-        .product-info__img1{
+    &__img {
+        .product-info__img1 {
             width: 100%;
         }
     }
-    &__text{
-        margin-left: 35px;
+    &__text {
+        max-width: 542px;
+        // margin-left: 35px;
     }
-    &__title{
+    &__title {
         font-family: 'GalanoGrotesque-Light', sans-serif;
         font-size: 36px;
         color: #000;
         margin-bottom: 30px;
-        .product-info__span{
+        .product-info__span {
             font-family: 'GalanoGrotesque-Bold', sans-serif;
             text-transform: uppercase;
         }
     }
-    &__descr{
+    &__descr {
+        // width: 490px;
         color: #000;
         font-size: 16px;
     }
-    &__consult{
-        margin-top: 100px;
+    &__consult {
+        position: relative;
+        margin-top: 86px;
         display: flex;
-        &-img{
+        margin-bottom: 30px;
+        &-img {
             margin-right: 30px;
         }
-        &-text{
-            
+        &-text {
+            font-family: 'GalanoGrotesque-Regular', sans-serif;
+            width: 100%;
+            &::before {
+                position: absolute;
+                content: '';
+                top: -43px;
+                width: 90%;
+                height: 1px;
+                background: #dedede;
+            }
         }
+    }
+    &__btn {
+        width: 250px;
+        float: right;
     }
 }

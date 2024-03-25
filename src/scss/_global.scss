@@ -45,7 +45,7 @@
 // Body & Locked
 body {
     margin: 0;
-    font-family: 'GalanoGrotesque', sans-serif;
+    font-family: 'GalanoGrotesque-Regular', sans-serif;
     font-weight: 400;
     &.locked {
         overflow: hidden;
@@ -84,7 +84,6 @@ body {
         box-shadow: none;
     }
 }
-
 
 .all-titles {
     position: relative;
