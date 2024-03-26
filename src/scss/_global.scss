@@ -158,6 +158,9 @@ body {
     display: flex;
     align-items: center;
     margin-top: 15px;
+    @media (max-width: $breakpoint480) {
+        flex-wrap: wrap;
+    }
     &__item {
         position: relative;
         &:not(:last-child) {
