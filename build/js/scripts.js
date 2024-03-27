@@ -5,7 +5,19 @@ let menu = document.querySelector('.nav--left');
 let menuItem = document.querySelectorAll('.nav__link--left');
 let dropLang = document.querySelector('.dropdown');
 let dropContent = dropLang.querySelector('.dropdown-content');
+let scrollBtn = document.querySelector('.btnScrollToTop');
 
+
+const btnScrollToTop = document.querySelector(".btnScrollToTop");
+
+btnScrollToTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+
+});
 
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY || window.pageYOffset;
@@ -13,6 +25,7 @@ window.addEventListener('scroll', function() {
     if (window.innerWidth <= 1280 && scrollPosition >= 35) {
         document.querySelector('.header__container').classList.add('scrolled');
         document.querySelector('.header__container').style.top = '0';
+
         document.querySelector('.header__container').transition = 'top 0.5s ease';
     } else {
         document.querySelector('.header__container').classList.remove('scrolled');
@@ -51,6 +64,9 @@ window.addEventListener('scroll', function() {
     }
 
     if (window.scrollY > firstSectionHeight) {
+        scrollBtn.classList.add('show');
+        scrollBtn.style.background = "#000";
+        scrollBtn.innerHTML.style.color = "#fff"
         burgerSpans.forEach(function(span) {
             span.style.backgroundColor = '#000';
         });
@@ -89,6 +105,8 @@ menuBtnOpen.addEventListener('click', function() {
     menuText.classList.remove('active');
     menuBtn.classList.remove('active');
 });
+
+
 
 const moreIdeas = new Swiper('.moreIdeas', {
 
