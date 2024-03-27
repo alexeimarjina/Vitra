@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitra Products</title>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -16,15 +15,16 @@
     @@include('./html/_header.html')
     <!-- Main Page -->
     <main>
-        @@include('./html/products/products-title-section.html') @@include('./html/products/products-inner.html') @@include('./html/products/products-info.html') @@include('./html/products/products-cards.html')
-        <!-- @@include('./html/mode-ideas-section.html') -->
+        @@include('./html/products/products-title-section.html') 
+        @@include('./html/products/products-inner.html') @@include('./html/products/products-info.html') @@include('./html/products/products-cards.html')
+        @@include('./html/products/products-slider.html')
 
     </main>
     <!-- Footer -->
     @@include('./html/_footer.html')
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="./js/product.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 

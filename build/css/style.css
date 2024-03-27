@@ -3038,7 +3038,7 @@ body.dark {
           justify-content: space-between;
 }
 
-.products-info__img .product-info__img1 {
+.products-info__img img {
   width: 100%;
 }
 
@@ -3120,10 +3120,13 @@ body.dark {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 
 .product-card {
-  width: 25%;
+  width: calc(25% - 45px);
 }
 
 .product-card__img {
@@ -3225,6 +3228,150 @@ body.dark {
   -webkit-transition: stroke 0.3s ease-in-out;
   -o-transition: stroke 0.3s ease-in-out;
   transition: stroke 0.3s ease-in-out;
+}
+
+.product-card__offer {
+  margin-top: 20px;
+  border-radius: 20px;
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.product-card__offer:hover {
+  background: #000;
+  color: #fff;
+}
+
+.product-card__offer:hover .product-card__price-cart {
+  background: #000;
+}
+
+.product-card__offer:hover .product-card__price-cart svg path {
+  -webkit-transition: stroke 0.3s ease-in-out;
+  -o-transition: stroke 0.3s ease-in-out;
+  transition: stroke 0.3s ease-in-out;
+  stroke: #fff;
+}
+
+.products-slider__section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.products-slider__section .swiper {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.products-slider__section .swiper .swiper-title {
+  font-family: "GalanoGrotesque-Light", sans-serif;
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+.products-slider__section .swiper .swiper-title span {
+  font-family: "GalanoGrotesque-Bold", sans-serif;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide {
+  max-width: 320px;
+  height: 360px;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide__img1 {
+  background-image: url(../../img/retail-solution1.jpg);
+  background-size: 320px 320px;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide__img2 {
+  background-image: url(../../img/retail-solution2.jpg);
+  background-size: 320px 320px;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide__img3 {
+  background-image: url(../../img/retail-solution3.jpg);
+  background-size: 320px 320px;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide__text {
+  opacity: 0.8;
+  margin-top: 222px;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  background-color: #dddbd9;
+  padding: 20px 0;
+}
+
+.products-slider__section .swiper .swiper-wrapper .swiper-slide__span {
+  font-family: "GalanoGrotesque-Bold", sans-serif;
+}
+
+.products-slider__section .swiper-scrollbar {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.products-slider__section .swiper-scrollbar-drag {
+  background: #ee2a26;
+}
+
+.products-slider__section .swiper .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+}
+
+.products-slider__section .swiper .swiper-button-next::after {
+  color: #000;
+  font-size: 30px;
+}
+
+.products-slider__section .swiper .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 10px 20px 0;
+}
+
+.products-slider__section .swiper .swiper-button-prev::after {
+  color: #000;
+  font-size: 30px;
 }
 
 .footer {
@@ -3505,6 +3652,39 @@ body.dark {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .products-info__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+
+  .products-info__consult-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .product-cards__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 35px;
+  }
+
+  .product-card {
+    width: 220px;
   }
 }
 
@@ -3921,6 +4101,11 @@ body.dark {
     padding-bottom: 100px;
   }
 
+  .breadcrumbs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .breadcrumbs__link {
     font-size: 12px;
   }
@@ -4247,6 +4432,37 @@ body.dark {
 
   .industry-info .custom-container .industry-info__cards .industry-info__card .industry-info__card-slider .swiper .industry-slider__img {
     padding: 0;
+  }
+
+  .products-info__consult-img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .products-info__btn {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .products-slider__section {
+    margin-top: 50px;
+  }
+
+  .products-slider__section .swiper .swiper-wrapper .swiper-slide {
+    max-width: 100%;
+  }
+
+  .products-slider__section .swiper .swiper-wrapper .swiper-slide__img1 {
+    background-size: 100% 320px;
+  }
+
+  .products-slider__section .swiper .swiper-wrapper .swiper-slide__img2 {
+    background-size: 100% 320px;
+  }
+
+  .products-slider__section .swiper .swiper-wrapper .swiper-slide__img3 {
+    background-size: 100% 320px;
   }
 }
 
